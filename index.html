@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Abdul Vajid EK | Vajid EK — Mechanical Project Engineer</title>
+
+  <meta name="description"
+        content="Official website of Abdul Vajid EK (Vajid EK), Mechanical Project Engineer specializing in Construction & Infrastructure, Project Management, ERP and Digital Engineering.">
+
+  <meta name="author" content="Abdul Vajid EK">
+
+  <link rel="canonical" href="https://vajidek.github.io/">
+
+  <!-- Open Graph -->
+  <meta property="og:title"
+        content="Abdul Vajid EK | Vajid EK — Mechanical Project Engineer">
+
+  <meta property="og:description"
+        content="Mechanical Project Engineer | Construction & Infrastructure | Project Management | ERP & Digital Engineering">
+
+  <meta property="og:type" content="profile">
+
+  <meta property="og:url"
+        content="https://vajidek.github.io/">
+
+  <!-- Person structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://vajidek.github.io/#person",
+    "name": "Abdul Vajid EK",
+    "alternateName": [
+      "Vajid EK",
+      "Vajid"
+    ],
+    "url": "https://vajidek.github.io/",
+    "jobTitle": "Mechanical Project Engineer",
+    "description": "Mechanical Project Engineer specializing in construction and infrastructure, project management, ERP and digital engineering."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --surface: #0d1b2d;
+      --surface-2: #12243a;
+      --text: #f5f7fa;
+      --muted: #a9b6c7;
+      --line: rgba(255,255,255,.09);
+      --accent: #63b3ff;
+      --accent-2: #8b7cff;
+      --max: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(99,179,255,.12), transparent 30%),
+        radial-gradient(circle at 10% 30%, rgba(139,124,255,.10), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(7,17,31,.78);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -.02em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: .95;
+      letter-spacing: -.065em;
+      max-width: 850px;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--accent);
+    }
+
+    .hero-text {
+      max-width: 720px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .button {
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .button.primary {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .8rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      letter-spacing: -.045em;
+      margin-bottom: 22px;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(13,27,45,.72);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .skill {
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: #dce6f2;
+      font-size: .9rem;
+    }
+
+    footer {
+      padding: 35px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 75vh;
+        padding: 65px 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#top">Vajid<span> EK</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="eyebrow">Abdul Vajid EK</div>
+
+        <h1>
+          Mechanical Project
+          <span>Engineer.</span>
+        </h1>
+
+        <p class="hero-text">
+          Construction & Infrastructure · Project Management ·
+          ERP & Digital Engineering
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="#about">Explore Profile</a>
+          <a class="button" href="#contact">Connect</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="about">
+      <div class="container">
+
+        <div class="section-label">About</div>
+
+        <h2>Abdul Vajid EK</h2>
+
+        <p class="intro">
+          Abdul Vajid EK, professionally known as Vajid EK, is a
+          Mechanical Project Engineer working across construction,
+          infrastructure, project execution and digital engineering.
+        </p>
+
+        <div class="grid">
+
+          <div class="card">
+            <h3>Mechanical Engineering</h3>
+            <p>
+              Project execution, mechanical systems, equipment,
+              installation, testing and commissioning.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Project Management</h3>
+            <p>
+              Site coordination, planning, BOQ analysis, procurement,
+              documentation and project execution.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Digital Engineering</h3>
+            <p>
+              Development of digital workflows, enterprise systems,
+              automation and technology-driven project management.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>ERP & Automation</h3>
+            <p>
+              Designing practical digital systems for construction,
+              infrastructure and organizational operations.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="expertise">
+      <div class="container">
+
+        <div class="section-label">Expertise</div>
+
+        <h2>Professional & Technical Areas</h2>
+
+        <p class="intro">
+          A combination of engineering, project execution and
+          technology-focused capabilities.
+        </p>
+
+        <div class="skills">
+          <span class="skill">Mechanical Engineering</span>
+          <span class="skill">Construction</span>
+          <span class="skill">Infrastructure Projects</span>
+          <span class="skill">Project Management</span>
+          <span class="skill">Site Management</span>
+          <span class="skill">BOQ Analysis</span>
+          <span class="skill">Tender & Procurement</span>
+          <span class="skill">ERP Development</span>
+          <span class="skill">Digital Engineering</span>
+          <span class="skill">AI Automation</span>
+          <span class="skill">SCADA & Industrial Automation</span>
+          <span class="skill">Material Management</span>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="work">
+      <div class="container">
+
+        <div class="section-label">Work</div>
+
+        <h2>Projects & Digital Work</h2>
+
+        <p class="intro">
+          Professional work combining mechanical project execution,
+          infrastructure development and technology-enabled
+          management systems.
+        </p>
+
+        <div class="grid">
+
+          <div class="card">
+            <h3>Construction & Infrastructure</h3>
+            <p>
+              Mechanical project execution, site coordination,
+              equipment installation and commissioning.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Project Management Systems</h3>
+            <p>
+              Digital workflows for project execution, materials,
+              procurement, attendance, payroll and reporting.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>ERP & Digital Platforms</h3>
+            <p>
+              Development of integrated enterprise tools for
+              construction and infrastructure operations.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Engineering Automation</h3>
+            <p>
+              Applying software, automation and AI technologies
+              to improve engineering and project workflows.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="contact">
+      <div class="container">
+
+        <div class="section-label">Connect</div>
+
+        <h2>Vajid EK</h2>
+
+        <p class="intro">
+          Professional profile and digital presence of
+          Abdul Vajid EK.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary"
+             href="https://github.com/vajidek"
+             target="_blank"
+             rel="noopener">
+            GitHub
+          </a>
+
+          <a class="button"
+             href="https://www.linkedin.com/"
+             target="_blank"
+             rel="noopener">
+            LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer>
+    <div class="container">
+      © 2026 Abdul Vajid EK · Vajid EK
+    </div>
+  </footer>
+
+</body>
+</html>
