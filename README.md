@@ -1,2 +1,2 @@
 # vajidek.github.io
-Official website of Abdul Vajid EK (Vajid EK) — Mechanical Project Engineer | Construction &amp; Infrastructure | Project Management | ERP &amp; Digital Engineering
+Official website of Abdul Vajid EK (Vajid EK) — Project & Department Coordinator | Construction & Infrastructure | Engineering & Project Operations | ERP & Digital Systems
