@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
@@ -120,62 +121,59 @@
   <style>
 
     /* =====================================================
-       DESIGN TOKENS / CSS VARIABLES
+       DESIGN SYSTEM
     ====================================================== */
 
     :root {
 
-      /* ---------- Colors ---------- */
+      /* Colors */
 
-      --color-bg:
+      --bg:
         #07111f;
 
-      --color-bg-deep:
+      --bg-deep:
         #050d18;
 
-      --color-surface:
+      --surface:
         rgba(255, 255, 255, 0.045);
 
-      --color-surface-hover:
+      --surface-hover:
         rgba(255, 255, 255, 0.07);
 
-      --color-border:
+      --border:
         rgba(255, 255, 255, 0.09);
 
-      --color-border-strong:
+      --border-strong:
         rgba(255, 255, 255, 0.15);
 
-      --color-text:
+      --text:
         #f5f8fc;
 
-      --color-text-soft:
+      --text-soft:
         #dce5f0;
 
-      --color-muted:
+      --muted:
         #a5b2c4;
 
-      --color-muted-dark:
+      --muted-dark:
         #728197;
 
-      --color-accent:
+      --accent:
         #63b3ff;
 
-      --color-accent-bright:
+      --accent-bright:
         #82c5ff;
 
-      --color-accent-soft:
+      --accent-soft:
         rgba(99, 179, 255, 0.10);
 
-      --color-accent-glow:
+      --accent-glow:
         rgba(99, 179, 255, 0.16);
 
-      --color-button-text:
-        #06111e;
 
+      /* Typography */
 
-      /* ---------- Typography ---------- */
-
-      --font-sans:
+      --font:
         Inter,
         -apple-system,
         BlinkMacSystemFont,
@@ -186,7 +184,7 @@
         sans-serif;
 
 
-      /* ---------- Layout ---------- */
+      /* Layout */
 
       --max-width:
         1160px;
@@ -197,11 +195,8 @@
       --section-space:
         100px;
 
-      --mobile-section-space:
-        76px;
 
-
-      /* ---------- Radius ---------- */
+      /* Radius */
 
       --radius-sm:
         10px;
@@ -215,11 +210,11 @@
       --radius-xl:
         26px;
 
-      --radius-pill:
+      --pill:
         999px;
 
 
-      /* ---------- Shadows ---------- */
+      /* Effects */
 
       --shadow-soft:
         0 20px 60px rgba(0, 0, 0, 0.18);
@@ -228,7 +223,7 @@
         0 10px 28px rgba(99, 179, 255, 0.12);
 
 
-      /* ---------- Transitions ---------- */
+      /* Motion */
 
       --transition-fast:
         0.18s ease;
@@ -236,8 +231,6 @@
       --transition:
         0.25s ease;
 
-      --transition-slow:
-        0.4s ease;
     }
 
 
@@ -264,10 +257,10 @@
       min-height: 100vh;
 
       font-family:
-        var(--font-sans);
+        var(--font);
 
       color:
-        var(--color-text);
+        var(--text);
 
       background:
 
@@ -283,13 +276,15 @@
           transparent 30%
         ),
 
-        var(--color-bg);
+        var(--bg);
 
       line-height: 1.6;
 
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing:
+        antialiased;
 
-      text-rendering: optimizeLegibility;
+      text-rendering:
+        optimizeLegibility;
     }
 
 
@@ -306,13 +301,13 @@
       background-image:
 
         linear-gradient(
-          rgba(255, 255, 255, 0.014) 1px,
+          rgba(255,255,255,0.014) 1px,
           transparent 1px
         ),
 
         linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.014) 1px,
+          rgba(255,255,255,0.014) 1px,
           transparent 1px
         );
 
@@ -346,13 +341,6 @@
     }
 
 
-    button,
-    a {
-      -webkit-tap-highlight-color:
-        transparent;
-    }
-
-
     /* =====================================================
        CONTAINER
     ====================================================== */
@@ -376,20 +364,23 @@
 
     .site-nav {
 
-      position: sticky;
+      position:
+        sticky;
 
-      top: 0;
+      top:
+        0;
 
-      z-index: 1000;
+      z-index:
+        1000;
 
       min-height:
         var(--nav-height);
 
       background:
-        rgba(7, 17, 31, 0.82);
+        rgba(7,17,31,0.84);
 
       border-bottom:
-        1px solid var(--color-border);
+        1px solid var(--border);
 
       backdrop-filter:
         blur(18px);
@@ -453,16 +444,16 @@
 
       border:
         1px solid
-        rgba(99, 179, 255, 0.34);
+        rgba(99,179,255,0.34);
 
       border-radius:
         var(--radius-sm);
 
       color:
-        var(--color-accent);
+        var(--accent);
 
       background:
-        var(--color-accent-soft);
+        var(--accent-soft);
 
       font-size:
         0.72rem;
@@ -494,7 +485,7 @@
         8px 0;
 
       color:
-        var(--color-muted);
+        var(--muted);
 
       font-size:
         0.88rem;
@@ -528,10 +519,10 @@
         2px;
 
       border-radius:
-        var(--radius-pill);
+        var(--pill);
 
       background:
-        var(--color-accent);
+        var(--accent);
 
       transition:
         width var(--transition);
@@ -542,7 +533,7 @@
     .nav-link.active {
 
       color:
-        var(--color-text);
+        var(--text);
     }
 
 
@@ -577,17 +568,18 @@
         70px;
 
       padding:
-        82px 0 95px;
+        82px 0 90px;
     }
 
 
     .hero-content {
+
       max-width:
         710px;
     }
 
 
-    /* Larger name as requested */
+    /* Personal name */
 
     .hero-name {
 
@@ -604,7 +596,7 @@
         21px;
 
       color:
-        var(--color-accent);
+        var(--accent);
 
       font-size:
         1.32rem;
@@ -619,6 +611,8 @@
         0.01em;
     }
 
+
+    /* Decorative line on desktop */
 
     .hero-name::before {
 
@@ -635,10 +629,10 @@
         0 0 auto;
 
       border-radius:
-        var(--radius-pill);
+        var(--pill);
 
       background:
-        var(--color-accent);
+        var(--accent);
     }
 
 
@@ -671,11 +665,9 @@
         block;
 
       color:
-        var(--color-accent);
+        var(--accent);
     }
 
-
-    /* Improved subtitle contrast */
 
     .hero-description {
 
@@ -686,7 +678,7 @@
         28px;
 
       color:
-        var(--color-text-soft);
+        var(--text-soft);
 
       font-size:
         1.04rem;
@@ -699,7 +691,7 @@
     .hero-description strong {
 
       color:
-        var(--color-text);
+        var(--text);
 
       font-weight:
         750;
@@ -748,7 +740,7 @@
 
       border:
         1px solid
-        var(--color-border-strong);
+        var(--border-strong);
 
       border-radius:
         11px;
@@ -758,9 +750,6 @@
 
       font-weight:
         750;
-
-      cursor:
-        pointer;
 
       transition:
         transform var(--transition),
@@ -773,7 +762,8 @@
     .btn:hover {
 
       transform:
-        translateY(-2px) scale(1.01);
+        translateY(-2px)
+        scale(1.01);
     }
 
 
@@ -781,7 +771,7 @@
 
       outline:
         2px solid
-        var(--color-accent);
+        var(--accent);
 
       outline-offset:
         4px;
@@ -791,13 +781,13 @@
     .btn-primary {
 
       color:
-        var(--color-button-text);
+        #06111e;
 
       background:
-        var(--color-accent);
+        var(--accent);
 
       border-color:
-        var(--color-accent);
+        var(--accent);
 
       box-shadow:
         var(--shadow-button);
@@ -807,39 +797,39 @@
     .btn-primary:hover {
 
       background:
-        var(--color-accent-bright);
+        var(--accent-bright);
 
       border-color:
-        var(--color-accent-bright);
+        var(--accent-bright);
 
       box-shadow:
         0 14px 34px
-        rgba(99, 179, 255, 0.18);
+        rgba(99,179,255,0.18);
     }
 
 
     .btn-secondary {
 
       color:
-        var(--color-text);
+        var(--text);
 
       background:
-        rgba(255, 255, 255, 0.025);
+        rgba(255,255,255,0.025);
     }
 
 
     .btn-secondary:hover {
 
       background:
-        var(--color-accent-soft);
+        var(--accent-soft);
 
       border-color:
-        rgba(99, 179, 255, 0.30);
+        rgba(99,179,255,0.30);
     }
 
 
     /* =====================================================
-       HERO PHOTO
+       PROFILE PHOTO
     ====================================================== */
 
     .hero-photo-area {
@@ -858,8 +848,6 @@
     }
 
 
-    /* Soft profile glow */
-
     .photo-glow {
 
       position:
@@ -875,7 +863,7 @@
         50%;
 
       background:
-        rgba(99, 179, 255, 0.12);
+        rgba(99,179,255,0.12);
 
       filter:
         blur(60px);
@@ -918,18 +906,18 @@
 
         linear-gradient(
           145deg,
-          rgba(99, 179, 255, 0.72),
-          rgba(99, 179, 255, 0.13),
-          rgba(255, 255, 255, 0.08)
+          rgba(99,179,255,0.72),
+          rgba(99,179,255,0.13),
+          rgba(255,255,255,0.08)
         );
 
       box-shadow:
 
         0 30px 80px
-        rgba(0, 0, 0, 0.28),
+        rgba(0,0,0,0.28),
 
         0 0 70px
-        rgba(99, 179, 255, 0.08);
+        rgba(99,179,255,0.08);
     }
 
 
@@ -948,11 +936,11 @@
         50%;
 
       background:
-        var(--color-bg-deep);
+        var(--bg-deep);
 
       border:
         3px solid
-        rgba(7, 17, 31, 0.96);
+        rgba(7,17,31,0.96);
     }
 
 
@@ -975,7 +963,7 @@
     }
 
 
-    /* Larger / clearer badge */
+    /* Profile badge */
 
     .photo-label {
 
@@ -996,13 +984,13 @@
 
       border:
         1px solid
-        rgba(255, 255, 255, 0.13);
+        rgba(255,255,255,0.13);
 
       border-radius:
         13px;
 
       background:
-        rgba(7, 17, 31, 0.88);
+        rgba(7,17,31,0.90);
 
       backdrop-filter:
         blur(14px);
@@ -1012,7 +1000,7 @@
 
       box-shadow:
         0 15px 40px
-        rgba(0, 0, 0, 0.24);
+        rgba(0,0,0,0.24);
     }
 
 
@@ -1047,7 +1035,7 @@
         3px;
 
       color:
-        var(--color-text);
+        var(--text);
 
       font-size:
         0.92rem;
@@ -1061,54 +1049,6 @@
 
 
     /* =====================================================
-       HERO NOTE
-    ====================================================== */
-
-    .hero-note {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        9px;
-
-      margin-top:
-        40px;
-
-      color:
-        var(--color-muted-dark);
-
-      font-size:
-        0.70rem;
-
-      font-weight:
-        650;
-
-      letter-spacing:
-        0.12em;
-
-      text-transform:
-        uppercase;
-    }
-
-
-    .hero-note-line {
-
-      width:
-        32px;
-
-      height:
-        1px;
-
-      background:
-        #536278;
-    }
-
-
-    /* =====================================================
        SECTIONS
     ====================================================== */
 
@@ -1118,8 +1058,7 @@
         var(--section-space) 0;
 
       border-top:
-        1px solid
-        var(--color-border);
+        1px solid var(--border);
 
       scroll-margin-top:
         calc(var(--nav-height) + 20px);
@@ -1129,7 +1068,7 @@
     .section-header {
 
       max-width:
-        760px;
+        800px;
 
       margin-bottom:
         46px;
@@ -1142,7 +1081,7 @@
         12px;
 
       color:
-        var(--color-accent);
+        var(--accent);
 
       font-size:
         0.73rem;
@@ -1178,13 +1117,16 @@
     }
 
 
-    .section-header p {
+    .section-header > p {
+
+      max-width:
+        850px;
 
       margin-top:
         17px;
 
       color:
-        var(--color-muted);
+        var(--muted);
 
       font-size:
         0.99rem;
@@ -1204,11 +1146,14 @@
         grid;
 
       grid-template-columns:
-        1.05fr
-        0.95fr;
+        0.85fr
+        1.15fr;
 
       gap:
         18px;
+
+      align-items:
+        stretch;
     }
 
 
@@ -1218,8 +1163,7 @@
         34px;
 
       border:
-        1px solid
-        var(--color-border);
+        1px solid var(--border);
 
       border-radius:
         var(--radius-lg);
@@ -1234,22 +1178,99 @@
     }
 
 
-    .about-main p {
+    .about-intro {
 
       color:
-        var(--color-text-soft);
+        var(--text-soft);
 
       font-size:
-        0.98rem;
+        1rem;
 
       line-height:
-        1.9;
+        1.85;
     }
 
 
-    .about-main p + p {
+    .about-points {
+
+      display:
+        grid;
+
+      gap:
+        16px;
+
       margin-top:
-        18px;
+        27px;
+
+      list-style:
+        none;
+    }
+
+
+    .about-point {
+
+      display:
+        flex;
+
+      align-items:
+        flex-start;
+
+      gap:
+        12px;
+    }
+
+
+    .about-point-icon {
+
+      width:
+        27px;
+
+      height:
+        27px;
+
+      flex:
+        0 0 27px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      margin-top:
+        2px;
+
+      border:
+        1px solid
+        rgba(99,179,255,0.24);
+
+      border-radius:
+        8px;
+
+      color:
+        var(--accent);
+
+      background:
+        var(--accent-soft);
+
+      font-size:
+        0.68rem;
+
+      font-weight:
+        900;
+    }
+
+
+    .about-point span {
+
+      color:
+        var(--muted);
+
+      font-size:
+        0.88rem;
+
+      line-height:
+        1.65;
     }
 
 
@@ -1275,14 +1296,13 @@
         23px;
 
       border:
-        1px solid
-        var(--color-border);
+        1px solid var(--border);
 
       border-radius:
         var(--radius-md);
 
       background:
-        var(--color-surface);
+        var(--surface);
 
       transition:
         transform var(--transition),
@@ -1300,7 +1320,7 @@
         rgba(99,179,255,0.25);
 
       background:
-        var(--color-surface-hover);
+        var(--surface-hover);
     }
 
 
@@ -1310,7 +1330,7 @@
         17px;
 
       color:
-        var(--color-accent);
+        var(--accent);
 
       font-size:
         0.68rem;
@@ -1336,7 +1356,7 @@
     .about-card p {
 
       color:
-        var(--color-muted);
+        var(--muted);
 
       font-size:
         0.83rem;
@@ -1373,7 +1393,7 @@
         grid;
 
       gap:
-        14px;
+        15px;
     }
 
 
@@ -1387,9 +1407,6 @@
 
       gap:
         12px;
-
-      color:
-        var(--color-muted-light);
     }
 
 
@@ -1418,10 +1435,10 @@
         8px;
 
       color:
-        var(--color-accent);
+        var(--accent);
 
       background:
-        var(--color-accent-soft);
+        var(--accent-soft);
 
       font-size:
         0.72rem;
@@ -1434,7 +1451,7 @@
     .expertise-point p {
 
       color:
-        var(--color-muted);
+        var(--muted);
 
       font-size:
         0.91rem;
@@ -1463,14 +1480,13 @@
         10px 14px;
 
       border:
-        1px solid
-        var(--color-border);
+        1px solid var(--border);
 
       border-radius:
-        var(--radius-pill);
+        var(--pill);
 
       color:
-        var(--color-text-soft);
+        var(--text-soft);
 
       background:
         rgba(255,255,255,0.025);
@@ -1494,7 +1510,7 @@
         translateY(-2px);
 
       background:
-        var(--color-accent-soft);
+        var(--accent-soft);
 
       border-color:
         rgba(99,179,255,0.25);
@@ -1533,8 +1549,7 @@
         30px;
 
       border:
-        1px solid
-        var(--color-border);
+        1px solid var(--border);
 
       border-radius:
         var(--radius-lg);
@@ -1587,7 +1602,7 @@
         50%;
 
       background:
-        var(--color-accent-glow);
+        var(--accent-glow);
 
       filter:
         blur(45px);
@@ -1618,7 +1633,7 @@
         34px;
 
       color:
-        var(--color-accent);
+        var(--accent);
 
       font-size:
         0.68rem;
@@ -1659,7 +1674,7 @@
         500px;
 
       color:
-        var(--color-muted);
+        var(--muted);
 
       font-size:
         0.88rem;
@@ -1771,7 +1786,7 @@
         18px;
 
       color:
-        var(--color-text-soft);
+        var(--text-soft);
 
       line-height:
         1.8;
@@ -1800,7 +1815,7 @@
         27px;
 
       color:
-        var(--color-muted);
+        var(--muted);
 
       font-size:
         0.85rem;
@@ -1809,7 +1824,7 @@
 
     .languages strong {
       color:
-        var(--color-text);
+        var(--text);
     }
 
 
@@ -1820,15 +1835,13 @@
     footer {
 
       padding:
-        30px 0
-        40px;
+        30px 0 40px;
 
       border-top:
-        1px solid
-        var(--color-border);
+        1px solid var(--border);
 
       color:
-        var(--color-muted-dark);
+        var(--muted-dark);
 
       font-size:
         0.78rem;
@@ -1853,20 +1866,17 @@
           55px;
 
         padding:
-          70px 0
-          85px;
+          70px 0 85px;
       }
 
 
       .hero-content {
-
         max-width:
           820px;
       }
 
 
       .hero-photo-area {
-
         justify-content:
           flex-start;
       }
@@ -1947,8 +1957,7 @@
           auto;
 
         padding:
-          58px 0
-          76px;
+          58px 0 76px;
 
         text-align:
           center;
@@ -1956,7 +1965,6 @@
 
 
       .hero-content {
-
         max-width:
           none;
       }
@@ -1968,13 +1976,15 @@
           center;
 
         font-size:
-          1.16rem;
+          1.12rem;
       }
 
 
+      /* Remove decorative line on mobile */
+
       .hero-name::before {
-        width:
-          25px;
+        display:
+          none;
       }
 
 
@@ -1982,9 +1992,9 @@
 
         font-size:
           clamp(
-            2.7rem,
-            13vw,
-            4.2rem
+            2.55rem,
+            12.5vw,
+            4rem
           );
       }
 
@@ -1998,7 +2008,7 @@
           0.94rem;
 
         line-height:
-          1.75;
+          1.72;
       }
 
 
@@ -2025,39 +2035,23 @@
       }
 
 
-      .hero-note {
-
-        justify-content:
-          center;
-
-        margin-top:
-          28px;
-      }
-
-
       .hero-photo-area {
 
         justify-content:
           center;
 
         margin-top:
-          5px;
+          8px;
       }
 
 
       .photo-ring {
 
         width:
-          min(
-            78vw,
-            310px
-          );
+          min(78vw, 310px);
 
         height:
-          min(
-            78vw,
-            310px
-          );
+          min(78vw, 310px);
       }
 
 
@@ -2091,7 +2085,7 @@
       section {
 
         padding:
-          var(--mobile-section-space) 0;
+          76px 0;
       }
 
 
@@ -2210,8 +2204,8 @@
 
         font-size:
           clamp(
-            2.55rem,
-            14vw,
+            2.45rem,
+            13.5vw,
             3.8rem
           );
       }
@@ -2318,6 +2312,7 @@
           About
         </a>
 
+
         <a
           href="#expertise"
           class="nav-link"
@@ -2326,6 +2321,7 @@
           Expertise
         </a>
 
+
         <a
           href="#work"
           class="nav-link"
@@ -2333,6 +2329,7 @@
         >
           Work
         </a>
+
 
         <a
           href="#contact"
@@ -2349,6 +2346,10 @@
   </nav>
 
 
+
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
 
   <main id="top">
 
@@ -2422,15 +2423,6 @@
         </div>
 
 
-        <div class="hero-note">
-
-          <span class="hero-note-line"></span>
-
-          Professional Profile
-
-        </div>
-
-
       </div>
 
 
@@ -2443,6 +2435,7 @@
         class="hero-photo-area"
         aria-label="Professional profile photo"
       >
+
 
         <div
           class="photo-glow"
@@ -2516,9 +2509,7 @@
           <p>
             Abdul Vajid EK, professionally known as Vajid EK,
             works in project and department coordination across
-            construction and infrastructure operations, supporting
-            management, project activities, official coordination,
-            documentation and technology-enabled workflows.
+            construction and infrastructure operations.
           </p>
 
         </div>
@@ -2530,21 +2521,76 @@
 
           <div class="about-main">
 
-            <p>
-              The work involves coordinating people, information,
-              documentation and operational activities across
-              projects and departments, while supporting management
-              requirements and improving digital workflows.
+
+            <p class="about-intro">
+              The work focuses on coordinating people,
+              information, documentation and operational
+              activities while supporting management and
+              improving technology-enabled workflows.
             </p>
 
 
-            <p>
-              Areas of involvement include construction and
-              infrastructure operations, project coordination,
-              BOQ and tender support, procurement-related activities,
-              ERP systems, digital platforms, automation and
-              project documentation.
-            </p>
+            <ul class="about-points">
+
+
+              <li class="about-point">
+
+                <span class="about-point-icon">
+                  ✓
+                </span>
+
+                <span>
+                  Project and department coordination
+                  across operational environments.
+                </span>
+
+              </li>
+
+
+              <li class="about-point">
+
+                <span class="about-point-icon">
+                  ✓
+                </span>
+
+                <span>
+                  Management support and coordination
+                  involving officials and external stakeholders.
+                </span>
+
+              </li>
+
+
+              <li class="about-point">
+
+                <span class="about-point-icon">
+                  ✓
+                </span>
+
+                <span>
+                  BOQ, tender, procurement and
+                  project documentation support.
+                </span>
+
+              </li>
+
+
+              <li class="about-point">
+
+                <span class="about-point-icon">
+                  ✓
+                </span>
+
+                <span>
+                  ERP, digital platforms, automation
+                  and technology-enabled workflows.
+                </span>
+
+              </li>
+
+
+            </ul>
+
 
           </div>
 
@@ -2564,8 +2610,9 @@
               </h3>
 
               <p>
-                Supporting project activities, coordination,
-                documentation and operational follow-up.
+                Supporting project activities,
+                coordination, documentation and
+                operational follow-up.
               </p>
 
             </article>
@@ -2600,8 +2647,9 @@
               </h3>
 
               <p>
-                Coordinating communication and requirements
-                involving officials and external stakeholders.
+                Coordinating communication and
+                requirements involving officials
+                and external stakeholders.
               </p>
 
             </article>
@@ -2618,8 +2666,9 @@
               </h3>
 
               <p>
-                Developing and improving digital workflows,
-                ERP platforms and technology-enabled operations.
+                Developing and improving digital
+                workflows, ERP platforms and
+                technology-enabled operations.
               </p>
 
             </article>
@@ -2679,8 +2728,22 @@
               </div>
 
               <p>
-                Project and department coordination across
-                operational environments.
+                Project and department coordination
+                across operational environments.
+              </p>
+
+            </div>
+
+
+            <div class="expertise-point">
+
+              <div class="expertise-icon">
+                ✓
+              </div>
+
+              <p>
+                Construction and infrastructure
+                project operations and support.
               </p>
 
             </div>
@@ -2707,8 +2770,8 @@
               </div>
 
               <p>
-                ERP, digital systems, AI automation and
-                technology-enabled workflows.
+                ERP, digital systems, AI automation
+                and technology-enabled workflows.
               </p>
 
             </div>
@@ -2950,9 +3013,9 @@
 
 
             <p>
-              For professional communication, project-related
-              discussions, technology and digital systems,
-              or collaboration.
+              For professional communication,
+              project-related discussions, technology
+              and digital systems, or collaboration.
             </p>
 
 
@@ -3057,16 +3120,18 @@
 
   <script>
 
-    const sections = document.querySelectorAll(
-      "main section[id]"
-    );
+    const sections =
+      document.querySelectorAll(
+        "main section[id]"
+      );
 
-    const navLinks = document.querySelectorAll(
-      ".nav-link"
-    );
+    const navLinks =
+      document.querySelectorAll(
+        ".nav-link"
+      );
 
 
-    const updateActiveNavigation = () => {
+    function updateActiveNavigation() {
 
       let currentSection = "";
 
@@ -3101,7 +3166,8 @@
       navLinks.forEach((link) => {
 
         const isActive =
-          link.dataset.section === currentSection;
+          link.dataset.section ===
+          currentSection;
 
         link.classList.toggle(
           "active",
@@ -3110,7 +3176,7 @@
 
       });
 
-    };
+    }
 
 
     window.addEventListener(
@@ -3139,6 +3205,7 @@
             );
 
           });
+
 
           link.classList.add(
             "active"
