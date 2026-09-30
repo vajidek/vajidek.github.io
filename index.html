@@ -34,9 +34,9 @@
   >
 
 
-  <!-- ======================================================
+  <!-- =====================================================
        OPEN GRAPH
-  ======================================================= -->
+  ====================================================== -->
 
   <meta
     property="og:type"
@@ -69,34 +69,9 @@
   >
 
 
-  <!-- ======================================================
-       TWITTER / SOCIAL PREVIEW
-  ======================================================= -->
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="Abdul Vajid EK | Vajid EK"
-  >
-
-  <meta
-    name="twitter:description"
-    content="Project & Department Coordinator | Construction & Infrastructure | Project Operations | ERP & Digital Systems"
-  >
-
-  <meta
-    name="twitter:image"
-    content="https://vajidek.github.io/profile.jpg"
-  >
-
-
-  <!-- ======================================================
+  <!-- =====================================================
        PERSON STRUCTURED DATA
-  ======================================================= -->
+  ====================================================== -->
 
   <script type="application/ld+json">
   {
@@ -138,68 +113,42 @@
   </script>
 
 
-  <!-- ======================================================
+  <!-- =====================================================
        STYLE
-  ======================================================= -->
+  ====================================================== -->
 
   <style>
 
-    /* ======================================================
-       ROOT
-    ======================================================= */
-
     :root {
 
-      --bg:
-        #07111f;
+      --bg: #07111f;
+      --bg-deep: #050d18;
 
-      --bg-2:
-        #091625;
+      --surface: rgba(255,255,255,0.045);
+      --surface-hover: rgba(255,255,255,0.065);
 
-      --surface:
-        rgba(255, 255, 255, 0.045);
+      --border: rgba(255,255,255,0.09);
+      --border-strong: rgba(255,255,255,0.14);
 
-      --surface-strong:
-        rgba(255, 255, 255, 0.065);
+      --text: #f5f8fc;
+      --muted: #9eacc0;
+      --muted-light: #c0cad8;
 
-      --border:
-        rgba(255, 255, 255, 0.09);
+      --accent: #63b3ff;
+      --accent-bright: #7cc3ff;
 
-      --border-light:
-        rgba(255, 255, 255, 0.13);
+      --accent-soft: rgba(99,179,255,0.10);
+      --accent-glow: rgba(99,179,255,0.18);
 
-      --text:
-        #f5f8fc;
+      --max-width: 1160px;
 
-      --muted:
-        #9eacc0;
-
-      --muted-light:
-        #bdc8d7;
-
-      --accent:
-        #63b3ff;
-
-      --accent-bright:
-        #78c0ff;
-
-      --accent-soft:
-        rgba(99, 179, 255, 0.11);
-
-      --accent-glow:
-        rgba(99, 179, 255, 0.20);
-
-      --max:
-        1160px;
-
-      --radius:
-        20px;
+      --radius: 20px;
     }
 
 
-    /* ======================================================
+    /* =====================================================
        RESET
-    ======================================================= */
+    ====================================================== */
 
     * {
       margin: 0;
@@ -227,30 +176,28 @@
         Arial,
         sans-serif;
 
+      color: var(--text);
+
       background:
         radial-gradient(
-          circle at 75% 15%,
-          rgba(99, 179, 255, 0.08),
+          circle at 75% 12%,
+          rgba(99,179,255,0.075),
+          transparent 27%
+        ),
+
+        radial-gradient(
+          circle at 12% 38%,
+          rgba(99,179,255,0.035),
           transparent 28%
         ),
-        radial-gradient(
-          circle at 15% 40%,
-          rgba(99, 179, 255, 0.035),
-          transparent 30%
-        ),
+
         var(--bg);
 
-      color:
-        var(--text);
+      line-height: 1.6;
 
-      line-height:
-        1.6;
+      -webkit-font-smoothing: antialiased;
 
-      -webkit-font-smoothing:
-        antialiased;
-
-      text-rendering:
-        optimizeLegibility;
+      text-rendering: optimizeLegibility;
     }
 
 
@@ -266,61 +213,52 @@
 
       background-image:
         linear-gradient(
-          rgba(255,255,255,0.018) 1px,
+          rgba(255,255,255,0.014) 1px,
           transparent 1px
         ),
         linear-gradient(
           90deg,
-          rgba(255,255,255,0.018) 1px,
+          rgba(255,255,255,0.014) 1px,
           transparent 1px
         );
 
-      background-size:
-        70px 70px;
+      background-size: 72px 72px;
 
       mask-image:
         linear-gradient(
           to bottom,
           black,
-          transparent 75%
+          transparent 72%
         );
 
-      opacity:
-        0.35;
+      opacity: 0.4;
 
-      z-index:
-        -1;
+      z-index: -1;
     }
 
 
     a {
-      color:
-        inherit;
-
-      text-decoration:
-        none;
+      color: inherit;
+      text-decoration: none;
     }
 
 
     img {
-      display:
-        block;
-
-      max-width:
-        100%;
+      display: block;
+      max-width: 100%;
     }
 
 
-    /* ======================================================
+    /* =====================================================
        CONTAINER
-    ======================================================= */
+    ====================================================== */
 
     .container {
 
       width:
         min(
           calc(100% - 48px),
-          var(--max)
+          var(--max-width)
         );
 
       margin:
@@ -328,23 +266,20 @@
     }
 
 
-    /* ======================================================
-       NAVIGATION
-    ======================================================= */
+    /* =====================================================
+       NAVBAR
+    ====================================================== */
 
     nav {
 
-      position:
-        sticky;
+      position: sticky;
 
-      top:
-        0;
+      top: 0;
 
-      z-index:
-        1000;
+      z-index: 1000;
 
       background:
-        rgba(7, 17, 31, 0.78);
+        rgba(7,17,31,0.82);
 
       backdrop-filter:
         blur(18px);
@@ -359,232 +294,178 @@
 
     .nav-inner {
 
-      height:
-        76px;
+      min-height: 74px;
 
-      display:
-        flex;
+      display: flex;
 
-      align-items:
-        center;
+      align-items: center;
 
-      justify-content:
-        space-between;
+      justify-content: space-between;
     }
 
 
     .brand {
 
-      display:
-        inline-flex;
+      display: inline-flex;
 
-      align-items:
-        center;
+      align-items: center;
 
-      gap:
-        10px;
+      gap: 10px;
 
-      font-size:
-        1.12rem;
+      font-size: 1.08rem;
 
-      font-weight:
-        800;
+      font-weight: 800;
 
-      letter-spacing:
-        -0.025em;
+      letter-spacing: -0.025em;
     }
 
 
     .brand-mark {
 
-      width:
-        32px;
+      width: 32px;
 
-      height:
-        32px;
+      height: 32px;
 
-      display:
-        grid;
+      display: grid;
 
-      place-items:
-        center;
+      place-items: center;
 
       border:
         1px solid
-        rgba(99, 179, 255, 0.35);
+        rgba(99,179,255,0.32);
 
-      border-radius:
-        9px;
+      border-radius: 9px;
 
-      color:
-        var(--accent);
+      color: var(--accent);
 
-      background:
-        var(--accent-soft);
+      background: var(--accent-soft);
 
-      font-size:
-        0.75rem;
+      font-size: 0.72rem;
 
-      font-weight:
-        900;
+      font-weight: 900;
     }
 
 
     .nav-links {
 
-      display:
-        flex;
+      display: flex;
 
-      align-items:
-        center;
+      align-items: center;
 
-      gap:
-        30px;
+      gap: 30px;
     }
 
 
     .nav-links a {
 
-      position:
-        relative;
+      position: relative;
 
-      color:
-        var(--muted-light);
+      color: var(--muted-light);
 
-      font-size:
-        0.9rem;
+      font-size: 0.88rem;
 
-      font-weight:
-        600;
+      font-weight: 600;
 
-      transition:
-        color 0.2s ease;
+      transition: color 0.2s ease;
+    }
+
+
+    .nav-links a:hover {
+      color: var(--text);
     }
 
 
     .nav-links a::after {
 
-      content:
-        "";
+      content: "";
 
-      position:
-        absolute;
+      position: absolute;
 
-      left:
-        0;
+      left: 0;
 
-      bottom:
-        -8px;
+      bottom: -8px;
 
-      width:
-        0;
+      width: 0;
 
-      height:
-        2px;
+      height: 2px;
 
-      background:
-        var(--accent);
+      border-radius: 999px;
 
-      transition:
-        width 0.2s ease;
-    }
+      background: var(--accent);
 
-
-    .nav-links a:hover {
-
-      color:
-        var(--text);
+      transition: width 0.2s ease;
     }
 
 
     .nav-links a:hover::after {
-
-      width:
-        100%;
+      width: 100%;
     }
 
 
-    /* ======================================================
+    /* =====================================================
        HERO
-    ======================================================= */
+    ====================================================== */
 
     .hero {
 
       min-height:
-        calc(100vh - 76px);
+        calc(100vh - 74px);
 
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        minmax(0, 1.15fr)
-        minmax(300px, 0.85fr);
+        minmax(0, 1fr)
+        390px;
 
-      align-items:
-        center;
+      align-items: center;
 
-      gap:
-        70px;
+      gap: 70px;
 
       padding:
-        90px 0 105px;
-
-      position:
-        relative;
+        82px 0
+        95px;
     }
 
 
     .hero-content {
 
-      max-width:
-        720px;
+      max-width: 700px;
     }
 
 
-    .hero-kicker {
+    .hero-name {
 
-      display:
-        inline-flex;
+      display: flex;
 
-      align-items:
-        center;
+      align-items: center;
 
-      gap:
-        10px;
+      gap: 11px;
 
-      margin-bottom:
-        22px;
+      margin-bottom: 20px;
 
-      color:
-        var(--accent);
+      color: var(--accent);
 
-      font-size:
-        1.08rem;
+      font-size: 1.12rem;
 
-      font-weight:
-        800;
+      font-weight: 800;
 
-      letter-spacing:
-        0.025em;
+      letter-spacing: 0.015em;
     }
 
 
-    .hero-kicker::before {
+    .hero-name::before {
 
-      content:
-        "";
+      content: "";
 
-      width:
-        30px;
+      width: 32px;
 
-      height:
-        2px;
+      height: 2px;
 
-      background:
-        var(--accent);
+      flex: 0 0 auto;
 
-      border-radius:
-        999px;
+      border-radius: 999px;
+
+      background: var(--accent);
     }
 
 
@@ -592,112 +473,88 @@
 
       font-size:
         clamp(
-          3.2rem,
-          6vw,
-          5.35rem
+          3.05rem,
+          5.7vw,
+          5.15rem
         );
 
-      line-height:
-        0.98;
+      line-height: 0.99;
 
-      letter-spacing:
-        -0.065em;
+      letter-spacing: -0.062em;
 
-      font-weight:
-        850;
+      font-weight: 850;
     }
 
 
     .hero h1 .accent {
 
-      display:
-        block;
+      display: block;
 
-      color:
-        var(--accent);
+      color: var(--accent);
     }
 
 
     .hero-description {
 
-      max-width:
-        680px;
+      max-width: 680px;
 
-      margin-top:
-        28px;
+      margin-top: 27px;
 
-      color:
-        var(--muted-light);
+      color: var(--muted-light);
 
-      font-size:
-        1.03rem;
+      font-size: 1rem;
 
-      line-height:
-        1.8;
+      line-height: 1.85;
     }
 
 
     .hero-description strong {
 
-      color:
-        var(--text);
+      color: var(--text);
 
-      font-weight:
-        650;
+      font-weight: 700;
     }
 
 
     .hero-actions {
 
-      display:
-        flex;
+      display: flex;
 
-      flex-wrap:
-        wrap;
+      flex-wrap: wrap;
 
-      gap:
-        12px;
+      gap: 12px;
 
-      margin-top:
-        32px;
+      margin-top: 31px;
     }
 
 
-    /* ======================================================
+    /* =====================================================
        BUTTONS
-    ======================================================= */
+    ====================================================== */
 
     .btn {
 
-      min-height:
-        48px;
+      min-height: 48px;
 
-      display:
-        inline-flex;
+      display: inline-flex;
 
-      align-items:
-        center;
+      align-items: center;
 
-      justify-content:
-        center;
+      justify-content: center;
 
-      gap:
-        9px;
+      gap: 9px;
 
       padding:
         0 19px;
 
       border:
-        1px solid var(--border-light);
+        1px solid var(--border-strong);
 
-      border-radius:
-        11px;
+      border-radius: 11px;
 
-      font-size:
-        0.9rem;
+      font-size: 0.9rem;
 
-      font-weight:
-        750;
+      font-weight: 750;
 
       transition:
         transform 0.2s ease,
@@ -716,321 +573,259 @@
 
     .btn-primary {
 
-      color:
-        #06111e;
+      color: #06111e;
 
-      background:
-        var(--accent);
+      background: var(--accent);
 
-      border-color:
-        var(--accent);
+      border-color: var(--accent);
 
       box-shadow:
-        0 10px 30px
-        rgba(99, 179, 255, 0.12);
+        0 10px 28px
+        rgba(99,179,255,0.12);
     }
 
 
     .btn-primary:hover {
 
-      background:
-        var(--accent-bright);
+      background: var(--accent-bright);
 
-      border-color:
-        var(--accent-bright);
+      border-color: var(--accent-bright);
 
       box-shadow:
-        0 14px 36px
-        rgba(99, 179, 255, 0.18);
+        0 14px 34px
+        rgba(99,179,255,0.17);
     }
 
 
     .btn-secondary {
 
-      color:
-        var(--text);
+      color: var(--text);
 
       background:
-        rgba(255, 255, 255, 0.025);
+        rgba(255,255,255,0.025);
     }
 
 
     .btn-secondary:hover {
 
-      background:
-        var(--accent-soft);
+      background: var(--accent-soft);
 
       border-color:
-        rgba(99, 179, 255, 0.28);
+        rgba(99,179,255,0.28);
     }
 
 
-    /* ======================================================
+    /* =====================================================
        HERO PHOTO
-    ======================================================= */
+    ====================================================== */
 
-    .hero-visual {
+    .hero-photo-area {
 
-      display:
-        flex;
+      position: relative;
 
-      justify-content:
-        center;
+      display: flex;
 
-      align-items:
-        center;
+      align-items: center;
 
-      position:
-        relative;
+      justify-content: center;
     }
 
 
-    .photo-card {
+    .photo-glow {
 
-      position:
-        relative;
+      position: absolute;
 
-      width:
-        330px;
+      width: 330px;
 
-      height:
-        400px;
+      height: 330px;
 
-      padding:
-        10px;
+      border-radius: 50%;
 
-      border:
-        1px solid
-        rgba(255, 255, 255, 0.12);
+      background:
+        rgba(99,179,255,0.13);
 
-      border-radius:
-        28px;
+      filter:
+        blur(55px);
+
+      opacity: 0.7;
+    }
+
+
+    .photo-ring {
+
+      position: relative;
+
+      width: 350px;
+
+      height: 350px;
+
+      padding: 8px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
 
       background:
         linear-gradient(
           145deg,
-          rgba(255,255,255,0.09),
-          rgba(255,255,255,0.025)
+          rgba(99,179,255,0.75),
+          rgba(99,179,255,0.12),
+          rgba(255,255,255,0.08)
         );
 
       box-shadow:
         0 30px 80px
-        rgba(0, 0, 0, 0.28);
+        rgba(0,0,0,0.28),
 
-      transform:
-        rotate(1.5deg);
+        0 0 70px
+        rgba(99,179,255,0.08);
     }
 
 
-    .photo-card::before {
+    .photo-inner {
 
-      content:
-        "";
+      width: 100%;
 
-      position:
-        absolute;
+      height: 100%;
 
-      inset:
-        -1px;
+      overflow: hidden;
 
-      border-radius:
-        28px;
+      border-radius: 50%;
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(99,179,255,0.55),
-          transparent 38%,
-          transparent 70%,
-          rgba(99,179,255,0.12)
-        );
+      background: var(--bg-deep);
 
-      opacity:
-        0.7;
-
-      pointer-events:
-        none;
-    }
-
-
-    .photo-frame {
-
-      position:
-        relative;
-
-      width:
-        100%;
-
-      height:
-        100%;
-
-      overflow:
-        hidden;
-
-      border-radius:
-        21px;
-
-      background:
-        #0b1829;
-
-      z-index:
-        1;
+      border:
+        3px solid
+        rgba(7,17,31,0.95);
     }
 
 
     .profile-photo {
 
-      width:
-        100%;
+      width: 100%;
 
-      height:
-        100%;
+      height: 100%;
 
-      object-fit:
-        cover;
+      display: block;
 
-      object-position:
-        center top;
+      object-fit: cover;
 
-      filter:
-        saturate(0.96)
-        contrast(1.02);
+      object-position: center center;
+
+      border-radius: 50%;
     }
 
 
-    .photo-overlay {
+    .photo-label {
 
-      position:
-        absolute;
+      position: absolute;
 
-      inset:
-        auto 0 0;
+      right: 5px;
 
-      height:
-        38%;
+      bottom: 24px;
+
+      z-index: 5;
+
+      padding:
+        11px 15px;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+      border-radius: 12px;
 
       background:
-        linear-gradient(
-          to top,
-          rgba(3, 10, 19, 0.82),
-          transparent
-        );
+        rgba(7,17,31,0.84);
 
-      pointer-events:
-        none;
+      backdrop-filter:
+        blur(12px);
+
+      -webkit-backdrop-filter:
+        blur(12px);
+
+      box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.22);
     }
 
 
-    .photo-caption {
+    .photo-label span {
 
-      position:
-        absolute;
+      display: block;
 
-      left:
-        24px;
+      color: #8090a5;
 
-      right:
-        24px;
+      font-size: 0.63rem;
 
-      bottom:
-        20px;
+      font-weight: 700;
 
-      z-index:
-        3;
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
     }
 
 
-    .photo-caption small {
+    .photo-label strong {
 
-      display:
-        block;
+      display: block;
 
-      color:
-        rgba(255,255,255,0.65);
+      margin-top: 2px;
 
-      font-size:
-        0.72rem;
+      color: var(--text);
 
-      letter-spacing:
-        0.12em;
+      font-size: 0.82rem;
 
-      text-transform:
-        uppercase;
+      font-weight: 750;
     }
 
 
-    .photo-caption strong {
+    /* =====================================================
+       HERO BOTTOM NOTE
+    ====================================================== */
 
-      display:
-        block;
+    .hero-note {
 
-      margin-top:
-        3px;
+      display: flex;
 
-      color:
-        white;
+      align-items: center;
 
-      font-size:
-        1rem;
+      gap: 9px;
 
-      font-weight:
-        750;
+      margin-top: 40px;
+
+      color: #6f7f94;
+
+      font-size: 0.7rem;
+
+      letter-spacing: 0.12em;
+
+      text-transform: uppercase;
     }
 
 
-    /* ======================================================
-       SCROLL INDICATOR
-    ======================================================= */
+    .hero-note-line {
 
-    .scroll-note {
+      width: 32px;
 
-      display:
-        flex;
+      height: 1px;
 
-      align-items:
-        center;
-
-      gap:
-        9px;
-
-      margin-top:
-        42px;
-
-      color:
-        #6f7f94;
-
-      font-size:
-        0.75rem;
-
-      letter-spacing:
-        0.08em;
-
-      text-transform:
-        uppercase;
+      background: #526277;
     }
 
 
-    .scroll-line {
-
-      width:
-        32px;
-
-      height:
-        1px;
-
-      background:
-        #53647a;
-    }
-
-
-    /* ======================================================
-       SECTION
-    ======================================================= */
+    /* =====================================================
+       SECTIONS
+    ====================================================== */
 
     section {
 
       padding:
-        105px 0;
+        100px 0;
 
       border-top:
         1px solid var(--border);
@@ -1039,33 +834,25 @@
 
     .section-header {
 
-      max-width:
-        750px;
+      max-width: 760px;
 
-      margin-bottom:
-        48px;
+      margin-bottom: 46px;
     }
 
 
     .section-label {
 
-      margin-bottom:
-        13px;
+      margin-bottom: 12px;
 
-      color:
-        var(--accent);
+      color: var(--accent);
 
-      font-size:
-        0.75rem;
+      font-size: 0.73rem;
 
-      font-weight:
-        800;
+      font-weight: 800;
 
-      letter-spacing:
-        0.16em;
+      letter-spacing: 0.16em;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
     }
 
 
@@ -1073,60 +860,50 @@
 
       font-size:
         clamp(
-          2.1rem,
-          4.2vw,
-          3.5rem
+          2.15rem,
+          4vw,
+          3.45rem
         );
 
-      line-height:
-        1.05;
+      line-height: 1.06;
 
-      letter-spacing:
-        -0.045em;
+      letter-spacing: -0.045em;
 
-      font-weight:
-        800;
+      font-weight: 800;
     }
 
 
     .section-header p {
 
-      margin-top:
-        17px;
+      margin-top: 17px;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-size:
-        1rem;
+      font-size: 0.98rem;
 
-      line-height:
-        1.8;
+      line-height: 1.85;
     }
 
 
-    /* ======================================================
+    /* =====================================================
        ABOUT
-    ======================================================= */
+    ====================================================== */
 
     .about-layout {
 
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
         1.05fr
         0.95fr;
 
-      gap:
-        20px;
+      gap: 18px;
     }
 
 
     .about-main {
 
-      padding:
-        34px;
+      padding: 34px;
 
       border:
         1px solid var(--border);
@@ -1145,50 +922,40 @@
 
     .about-main p {
 
-      color:
-        var(--muted-light);
+      color: var(--muted-light);
 
-      font-size:
-        1rem;
+      font-size: 1rem;
 
-      line-height:
-        1.9;
+      line-height: 1.9;
     }
 
 
     .about-main p + p {
-
-      margin-top:
-        18px;
+      margin-top: 18px;
     }
 
 
     .about-grid {
 
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
         repeat(2, 1fr);
 
-      gap:
-        14px;
+      gap: 14px;
     }
 
 
-    .mini-card {
+    .about-card {
 
-      min-height:
-        170px;
+      min-height: 165px;
 
-      padding:
-        24px;
+      padding: 23px;
 
       border:
         1px solid var(--border);
 
-      border-radius:
-        17px;
+      border-radius: 17px;
 
       background:
         var(--surface);
@@ -1200,7 +967,7 @@
     }
 
 
-    .mini-card:hover {
+    .about-card:hover {
 
       transform:
         translateY(-3px);
@@ -1209,115 +976,77 @@
         rgba(99,179,255,0.25);
 
       background:
-        var(--surface-strong);
+        var(--surface-hover);
     }
 
 
-    .mini-icon {
+    .about-number {
 
-      width:
-        38px;
+      margin-bottom: 18px;
 
-      height:
-        38px;
+      color: var(--accent);
 
-      display:
-        grid;
+      font-size: 0.68rem;
 
-      place-items:
-        center;
+      font-weight: 850;
 
-      border:
-        1px solid
-        rgba(99,179,255,0.22);
-
-      border-radius:
-        10px;
-
-      color:
-        var(--accent);
-
-      background:
-        var(--accent-soft);
-
-      font-size:
-        0.8rem;
-
-      font-weight:
-        900;
-
-      margin-bottom:
-        20px;
+      letter-spacing: 0.13em;
     }
 
 
-    .mini-card h3 {
+    .about-card h3 {
 
-      font-size:
-        1rem;
+      margin-bottom: 8px;
 
-      margin-bottom:
-        8px;
+      font-size: 0.98rem;
     }
 
 
-    .mini-card p {
+    .about-card p {
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-size:
-        0.84rem;
+      font-size: 0.83rem;
 
-      line-height:
-        1.65;
+      line-height: 1.65;
     }
 
 
-    /* ======================================================
+    /* =====================================================
        EXPERTISE
-    ======================================================= */
+    ====================================================== */
 
-    .expertise-wrap {
+    .expertise-layout {
 
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
-        0.75fr
-        1.25fr;
+        0.7fr
+        1.3fr;
 
-      gap:
-        50px;
+      gap: 55px;
 
-      align-items:
-        start;
+      align-items: start;
     }
 
 
     .expertise-copy p {
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      line-height:
-        1.85;
+      font-size: 0.98rem;
 
-      font-size:
-        0.98rem;
+      line-height: 1.85;
     }
 
 
     .skills {
 
-      display:
-        flex;
+      display: flex;
 
-      flex-wrap:
-        wrap;
+      flex-wrap: wrap;
 
-      gap:
-        10px;
+      gap: 10px;
     }
 
 
@@ -1329,25 +1058,21 @@
       border:
         1px solid var(--border);
 
-      border-radius:
-        999px;
+      border-radius: 999px;
 
-      color:
-        #dce6f2;
+      color: #dce6f2;
 
       background:
         rgba(255,255,255,0.025);
 
-      font-size:
-        0.85rem;
+      font-size: 0.84rem;
 
-      font-weight:
-        600;
+      font-weight: 600;
 
       transition:
+        transform 0.2s ease,
         background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+        border-color 0.2s ease;
     }
 
 
@@ -1364,36 +1089,30 @@
     }
 
 
-    /* ======================================================
+    /* =====================================================
        WORK
-    ======================================================= */
+    ====================================================== */
 
     .work-grid {
 
-      display:
-        grid;
+      display: grid;
 
       grid-template-columns:
         repeat(2, 1fr);
 
-      gap:
-        16px;
+      gap: 16px;
     }
 
 
     .work-card {
 
-      position:
-        relative;
+      position: relative;
 
-      overflow:
-        hidden;
+      overflow: hidden;
 
-      min-height:
-        230px;
+      min-height: 225px;
 
-      padding:
-        30px;
+      padding: 30px;
 
       border:
         1px solid var(--border);
@@ -1414,143 +1133,118 @@
     }
 
 
-    .work-card::after {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      width:
-        150px;
-
-      height:
-        150px;
-
-      right:
-        -80px;
-
-      bottom:
-        -80px;
-
-      border-radius:
-        50%;
-
-      background:
-        var(--accent-glow);
-
-      filter:
-        blur(40px);
-
-      opacity:
-        0;
-
-      transition:
-        opacity 0.25s ease;
-    }
-
-
     .work-card:hover {
 
       transform:
         translateY(-4px);
 
       border-color:
-        rgba(99,179,255,0.24);
+        rgba(99,179,255,0.25);
+    }
+
+
+    .work-card::after {
+
+      content: "";
+
+      position: absolute;
+
+      right: -70px;
+
+      bottom: -70px;
+
+      width: 150px;
+
+      height: 150px;
+
+      border-radius: 50%;
+
+      background:
+        var(--accent-glow);
+
+      filter:
+        blur(45px);
+
+      opacity: 0;
+
+      transition:
+        opacity 0.25s ease;
     }
 
 
     .work-card:hover::after {
-
-      opacity:
-        0.7;
+      opacity: 0.7;
     }
 
 
     .work-number {
 
-      color:
-        var(--accent);
+      position: relative;
 
-      font-size:
-        0.7rem;
+      z-index: 2;
 
-      font-weight:
-        850;
+      margin-bottom: 34px;
 
-      letter-spacing:
-        0.16em;
+      color: var(--accent);
 
-      margin-bottom:
-        35px;
+      font-size: 0.68rem;
+
+      font-weight: 850;
+
+      letter-spacing: 0.13em;
     }
 
 
     .work-card h3 {
 
-      position:
-        relative;
+      position: relative;
 
-      z-index:
-        2;
+      z-index: 2;
 
-      font-size:
-        1.25rem;
+      margin-bottom: 11px;
 
-      margin-bottom:
-        11px;
+      font-size: 1.22rem;
     }
 
 
     .work-card p {
 
-      position:
-        relative;
+      position: relative;
 
-      z-index:
-        2;
+      z-index: 2;
 
-      max-width:
-        480px;
+      max-width: 500px;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-size:
-        0.9rem;
+      font-size: 0.88rem;
 
-      line-height:
-        1.75;
+      line-height: 1.75;
     }
 
 
-    /* ======================================================
+    /* =====================================================
        CONTACT
-    ======================================================= */
+    ====================================================== */
 
     .contact-box {
 
-      position:
-        relative;
+      position: relative;
 
-      overflow:
-        hidden;
+      overflow: hidden;
 
-      padding:
-        55px;
+      padding: 54px;
 
       border:
         1px solid
         rgba(99,179,255,0.16);
 
-      border-radius:
-        24px;
+      border-radius: 24px;
 
       background:
         linear-gradient(
           135deg,
-          rgba(99,179,255,0.09),
+          rgba(99,179,255,0.085),
           rgba(255,255,255,0.025)
         );
     }
@@ -1558,125 +1252,102 @@
 
     .contact-box::before {
 
-      content:
-        "";
+      content: "";
 
-      position:
-        absolute;
+      position: absolute;
 
-      width:
-        300px;
+      top: -160px;
 
-      height:
-        300px;
+      right: -120px;
 
-      right:
-        -120px;
+      width: 320px;
 
-      top:
-        -150px;
+      height: 320px;
 
-      border-radius:
-        50%;
+      border-radius: 50%;
 
       background:
-        rgba(99,179,255,0.12);
+        rgba(99,179,255,0.10);
 
       filter:
-        blur(50px);
+        blur(55px);
     }
 
 
     .contact-content {
 
-      position:
-        relative;
+      position: relative;
 
-      z-index:
-        2;
+      z-index: 2;
     }
 
 
     .contact-box h2 {
 
-      max-width:
-        750px;
+      max-width: 760px;
 
       font-size:
         clamp(
-          2.1rem,
-          4.5vw,
-          3.8rem
+          2.15rem,
+          4.4vw,
+          3.7rem
         );
 
-      line-height:
-        1.05;
+      line-height: 1.05;
 
-      letter-spacing:
-        -0.05em;
+      letter-spacing: -0.05em;
     }
 
 
     .contact-box p {
 
-      max-width:
-        650px;
+      max-width: 650px;
 
-      margin-top:
-        18px;
+      margin-top: 18px;
 
-      color:
-        var(--muted-light);
+      color: var(--muted-light);
 
-      line-height:
-        1.8;
+      line-height: 1.8;
     }
 
 
     .contact-links {
 
-      display:
-        flex;
+      display: flex;
 
-      flex-wrap:
-        wrap;
+      flex-wrap: wrap;
 
-      gap:
-        10px;
+      gap: 10px;
 
-      margin-top:
-        30px;
+      margin-top: 30px;
     }
 
 
     .languages {
 
-      margin-top:
-        28px;
+      margin-top: 27px;
 
-      color:
-        var(--muted);
+      color: var(--muted);
 
-      font-size:
-        0.86rem;
+      font-size: 0.85rem;
     }
 
 
     .languages strong {
 
-      color:
-        var(--text);
+      color: var(--text);
     }
 
 
-    /* ======================================================
+    /* =====================================================
        FOOTER
-    ======================================================= */
+    ====================================================== */
 
     footer {
 
       padding:
-        32px 0 42px;
+        30px 0
+        40px;
 
       border-top:
         1px solid var(--border);
@@ -1692,9 +1363,9 @@
     }
 
 
-    /* ======================================================
-       RESPONSIVE — TABLET
-    ======================================================= */
+    /* =====================================================
+       TABLET
+    ====================================================== */
 
     @media (max-width: 950px) {
 
@@ -1703,35 +1374,33 @@
         grid-template-columns:
           1fr;
 
-        gap:
-          55px;
+        gap: 55px;
 
         padding:
-          75px 0 90px;
+          70px 0
+          85px;
       }
 
 
       .hero-content {
 
         max-width:
-          800px;
+          820px;
       }
 
 
-      .hero-visual {
+      .hero-photo-area {
 
         justify-content:
           flex-start;
       }
 
 
-      .photo-card {
+      .photo-ring {
 
-        width:
-          290px;
+        width: 320px;
 
-        height:
-          350px;
+        height: 320px;
       }
 
 
@@ -1742,21 +1411,20 @@
       }
 
 
-      .expertise-wrap {
+      .expertise-layout {
 
         grid-template-columns:
           1fr;
 
-        gap:
-          28px;
+        gap: 28px;
       }
 
     }
 
 
-    /* ======================================================
-       RESPONSIVE — MOBILE
-    ======================================================= */
+    /* =====================================================
+       MOBILE
+    ====================================================== */
 
     @media (max-width: 700px) {
 
@@ -1765,56 +1433,49 @@
         width:
           min(
             calc(100% - 30px),
-            var(--max)
+            var(--max-width)
           );
       }
 
 
       .nav-inner {
 
-        height:
-          auto;
+        min-height: 68px;
 
-        min-height:
-          68px;
-
-        padding:
-          14px 0;
-
-        gap:
-          14px;
+        gap: 14px;
       }
 
 
       .nav-links {
 
-        gap:
-          15px;
+        gap: 16px;
       }
 
 
       .nav-links a {
 
         font-size:
-          0.78rem;
+          0.77rem;
       }
 
 
       .nav-links a::after {
-
-        display:
-          none;
+        display: none;
       }
 
 
       .hero {
 
+        min-height:
+          auto;
+
         padding:
-          58px 0 75px;
+          58px 0
+          75px;
       }
 
 
-      .hero-kicker {
+      .hero-name {
 
         font-size:
           1rem;
@@ -1824,10 +1485,8 @@
       }
 
 
-      .hero-kicker::before {
-
-        width:
-          23px;
+      .hero-name::before {
+        width: 25px;
       }
 
 
@@ -1835,13 +1494,13 @@
 
         font-size:
           clamp(
-            2.75rem,
+            2.7rem,
             13vw,
-            4.3rem
+            4.2rem
           );
 
         line-height:
-          0.99;
+          1;
       }
 
 
@@ -1851,7 +1510,7 @@
           22px;
 
         font-size:
-          0.94rem;
+          0.92rem;
 
         line-height:
           1.75;
@@ -1870,32 +1529,44 @@
 
       .hero-actions .btn {
 
-        width:
-          100%;
+        width: 100%;
       }
 
 
-      .scroll-note {
-
-        margin-top:
-          30px;
-      }
-
-
-      .hero-visual {
+      .hero-photo-area {
 
         justify-content:
           center;
+
+        margin-top:
+          8px;
       }
 
 
-      .photo-card {
+      .photo-ring {
 
         width:
-          min(100%, 310px);
+          min(78vw, 310px);
 
         height:
-          375px;
+          min(78vw, 310px);
+      }
+
+
+      .photo-label {
+
+        right:
+          0;
+
+        bottom:
+          12px;
+      }
+
+
+      .hero-note {
+
+        margin-top:
+          28px;
       }
 
 
@@ -1916,7 +1587,7 @@
       .section-header h2 {
 
         font-size:
-          2.35rem;
+          2.3rem;
       }
 
 
@@ -1930,14 +1601,7 @@
       .about-main {
 
         padding:
-          26px;
-      }
-
-
-      .mini-card {
-
-        min-height:
-          150px;
+          27px;
       }
 
 
@@ -1981,36 +1645,22 @@
     }
 
 
-    /* ======================================================
-       RESPONSIVE — SMALL PHONE
-    ======================================================= */
+    /* =====================================================
+       SMALL MOBILE
+    ====================================================== */
 
     @media (max-width: 480px) {
 
-      .brand {
-
-        font-size:
-          1rem;
-      }
-
-
-      .brand-mark {
-
-        width:
-          29px;
-
-        height:
-          29px;
-      }
-
-
       .nav-inner {
+
+        flex-direction:
+          column;
 
         align-items:
           flex-start;
 
-        flex-direction:
-          column;
+        padding:
+          14px 0;
       }
 
 
@@ -2024,13 +1674,6 @@
       }
 
 
-      .nav-links a {
-
-        font-size:
-          0.76rem;
-      }
-
-
       .hero {
 
         padding-top:
@@ -2038,27 +1681,51 @@
       }
 
 
-      .hero-kicker {
+      .hero-name {
 
         font-size:
-          0.95rem;
+          0.94rem;
       }
 
 
-      .photo-card {
+      .hero h1 {
+
+        font-size:
+          clamp(
+            2.55rem,
+            14vw,
+            3.8rem
+          );
+      }
+
+
+      .photo-ring {
 
         width:
           270px;
 
         height:
-          330px;
+          270px;
+      }
+
+
+      .photo-label {
+
+        right:
+          -4px;
+
+        bottom:
+          7px;
+
+        padding:
+          9px 12px;
       }
 
 
       .contact-box h2 {
 
         font-size:
-          2.3rem;
+          2.25rem;
       }
 
     }
@@ -2071,9 +1738,9 @@
 <body>
 
 
-  <!-- ======================================================
+  <!-- =====================================================
        NAVIGATION
-  ======================================================= -->
+  ====================================================== -->
 
   <nav>
 
@@ -2117,6 +1784,7 @@
 
       </div>
 
+
     </div>
 
   </nav>
@@ -2126,9 +1794,9 @@
   <main id="top">
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          HERO
-    ===================================================== -->
+    ==================================================== -->
 
     <header class="container hero">
 
@@ -2136,7 +1804,7 @@
       <div class="hero-content">
 
 
-        <div class="hero-kicker">
+        <div class="hero-name">
           Abdul Vajid EK
         </div>
 
@@ -2157,7 +1825,9 @@
           <strong>
             Construction &amp; Infrastructure
           </strong>
+
           · Engineering &amp; Project Operations
+
           · ERP &amp; Digital Systems
 
         </p>
@@ -2184,18 +1854,20 @@
             href="#contact"
             class="btn btn-secondary"
           >
+
             Connect
+
           </a>
 
 
         </div>
 
 
-        <div class="scroll-note">
+        <div class="hero-note">
 
-          <span class="scroll-line"></span>
+          <span class="hero-note-line"></span>
 
-          Scroll to explore
+          Professional Profile
 
         </div>
 
@@ -2204,44 +1876,46 @@
 
 
 
-      <!-- ==================================================
-           PROFILE IMAGE
-      =================================================== -->
+      <!-- =================================================
+           PROFILE PHOTO
+      ================================================== -->
 
-      <div class="hero-visual">
-
-
-        <div class="photo-card">
+      <div class="hero-photo-area">
 
 
-          <div class="photo-frame">
+        <div class="photo-glow"></div>
+
+
+        <div class="photo-ring">
+
+
+          <div class="photo-inner">
 
 
             <img
               src="profile.jpg"
               alt="Abdul Vajid EK — Project & Department Coordinator"
               class="profile-photo"
+              width="1254"
+              height="1254"
             >
-
-
-            <div class="photo-overlay"></div>
-
-
-            <div class="photo-caption">
-
-              <small>
-                Professional Profile
-              </small>
-
-              <strong>
-                Abdul Vajid EK
-              </strong>
-
-            </div>
 
 
           </div>
 
+
+        </div>
+
+
+        <div class="photo-label">
+
+          <span>
+            Professional Profile
+          </span>
+
+          <strong>
+            Abdul Vajid EK
+          </strong>
 
         </div>
 
@@ -2253,9 +1927,9 @@
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          ABOUT
-    ===================================================== -->
+    ==================================================== -->
 
     <section id="about">
 
@@ -2268,10 +1942,12 @@
             About
           </div>
 
+
           <h2>
             Coordination,
             operations &amp; systems.
           </h2>
+
 
           <p>
             Abdul Vajid EK, professionally known as Vajid EK,
@@ -2297,6 +1973,7 @@
               requirements and improving digital workflows.
             </p>
 
+
             <p>
               Areas of involvement include construction and
               infrastructure operations, project coordination,
@@ -2312,9 +1989,9 @@
           <div class="about-grid">
 
 
-            <div class="mini-card">
+            <div class="about-card">
 
-              <div class="mini-icon">
+              <div class="about-number">
                 01
               </div>
 
@@ -2330,9 +2007,9 @@
             </div>
 
 
-            <div class="mini-card">
+            <div class="about-card">
 
-              <div class="mini-icon">
+              <div class="about-number">
                 02
               </div>
 
@@ -2348,9 +2025,9 @@
             </div>
 
 
-            <div class="mini-card">
+            <div class="about-card">
 
-              <div class="mini-icon">
+              <div class="about-number">
                 03
               </div>
 
@@ -2366,9 +2043,9 @@
             </div>
 
 
-            <div class="mini-card">
+            <div class="about-card">
 
-              <div class="mini-icon">
+              <div class="about-number">
                 04
               </div>
 
@@ -2394,9 +2071,9 @@
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          EXPERTISE
-    ===================================================== -->
+    ==================================================== -->
 
     <section id="expertise">
 
@@ -2409,23 +2086,32 @@
             Expertise
           </div>
 
+
           <h2>
             Areas of work.
           </h2>
+
+
+          <p>
+            A combination of project coordination,
+            infrastructure operations, documentation,
+            procurement support and digital systems.
+          </p>
 
         </div>
 
 
 
-        <div class="expertise-wrap">
+        <div class="expertise-layout">
 
 
           <div class="expertise-copy">
 
             <p>
-              A combination of project coordination,
-              infrastructure operations, documentation,
-              procurement support and digital systems.
+              Work spans coordination and operational support,
+              project documentation, procurement-related activities
+              and the development of digital systems for
+              construction and infrastructure environments.
             </p>
 
           </div>
@@ -2495,9 +2181,9 @@
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          WORK
-    ===================================================== -->
+    ==================================================== -->
 
     <section id="work">
 
@@ -2510,9 +2196,11 @@
             Work
           </div>
 
+
           <h2>
             Professional focus.
           </h2>
+
 
           <p>
             Work areas spanning physical infrastructure,
@@ -2532,9 +2220,11 @@
               01 / INFRASTRUCTURE
             </div>
 
+
             <h3>
               Construction &amp; Infrastructure
             </h3>
+
 
             <p>
               Coordination and operational support across
@@ -2552,9 +2242,11 @@
               02 / OPERATIONS
             </div>
 
+
             <h3>
               Project Operations
             </h3>
+
 
             <p>
               Project coordination, documentation,
@@ -2572,9 +2264,11 @@
               03 / DIGITAL
             </div>
 
+
             <h3>
               ERP &amp; Digital Platforms
             </h3>
+
 
             <p>
               Designing and developing digital systems
@@ -2592,9 +2286,11 @@
               04 / AUTOMATION
             </div>
 
+
             <h3>
               Digital Engineering &amp; Automation
             </h3>
+
 
             <p>
               Exploring ERP, AI automation, SCADA,
@@ -2613,9 +2309,9 @@
 
 
 
-    <!-- ====================================================
+    <!-- ===================================================
          CONTACT
-    ===================================================== -->
+    ==================================================== -->
 
     <section id="contact">
 
@@ -2644,7 +2340,6 @@
               discussions, technology and digital systems,
               or collaboration.
             </p>
-
 
 
             <div class="contact-links">
@@ -2701,7 +2396,6 @@
             </div>
 
 
-
             <div class="languages">
 
               <strong>
@@ -2727,9 +2421,9 @@
 
 
 
-  <!-- ======================================================
+  <!-- =====================================================
        FOOTER
-  ======================================================= -->
+  ====================================================== -->
 
   <footer>
 
