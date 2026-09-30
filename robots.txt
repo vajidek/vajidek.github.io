@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vajidek.github.io/sitemap.xml
