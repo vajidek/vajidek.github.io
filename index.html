@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -14,7 +15,7 @@
 
   <meta
     name="description"
-    content="Official website of Abdul Vajid EK (Vajid EK), Project & Department Coordinator working across Construction & Infrastructure, Engineering & Project Operations, ERP and Digital Systems."
+    content="Official website of Abdul Vajid EK (Vajid EK), Project & Department Coordinator working across Construction & Infrastructure, Project Operations, ERP and Digital Systems."
   >
 
   <meta
@@ -22,12 +23,26 @@
     content="Abdul Vajid EK"
   >
 
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
   <link
     rel="canonical"
     href="https://vajidek.github.io/"
   >
 
-  <!-- Open Graph -->
+
+  <!-- ======================================================
+       OPEN GRAPH
+  ======================================================= -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
   <meta
     property="og:title"
     content="Abdul Vajid EK | Vajid EK"
@@ -35,7 +50,7 @@
 
   <meta
     property="og:description"
-    content="Project & Department Coordinator | Construction & Infrastructure | Engineering & Project Operations | ERP & Digital Systems"
+    content="Project & Department Coordinator | Construction & Infrastructure | Project Operations | ERP & Digital Systems"
   >
 
   <meta
@@ -44,36 +59,75 @@
   >
 
   <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
     property="og:site_name"
     content="Abdul Vajid EK"
   >
 
-  <!-- Person Structured Data -->
+  <meta
+    property="og:image"
+    content="https://vajidek.github.io/profile.jpg"
+  >
+
+
+  <!-- ======================================================
+       TWITTER / SOCIAL PREVIEW
+  ======================================================= -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Abdul Vajid EK | Vajid EK"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Project & Department Coordinator | Construction & Infrastructure | Project Operations | ERP & Digital Systems"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://vajidek.github.io/profile.jpg"
+  >
+
+
+  <!-- ======================================================
+       PERSON STRUCTURED DATA
+  ======================================================= -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "@id": "https://vajidek.github.io/#person",
+
     "name": "Abdul Vajid EK",
+
     "alternateName": [
       "Vajid EK",
       "Vajid"
     ],
+
     "url": "https://vajidek.github.io/",
+
     "jobTitle": "Project & Department Coordinator",
-    "description": "Project & Department Coordinator working across construction and infrastructure, engineering and project operations, ERP and digital systems.",
+
+    "description": "Project & Department Coordinator working across construction and infrastructure, project operations, ERP and digital systems.",
+
     "email": "mailto:vajidek1@gmail.com",
+
+    "image": "https://vajidek.github.io/profile.jpg",
+
     "sameAs": [
       "https://www.instagram.com/vajid.ek",
       "https://www.facebook.com/abdul.v.ek/",
       "https://www.linkedin.com/in/abdul-vajid-ek-a75b07234/",
       "https://github.com/vajidek"
     ],
+
     "knowsLanguage": [
       "Malayalam",
       "English",
@@ -83,31 +137,69 @@
   }
   </script>
 
+
+  <!-- ======================================================
+       STYLE
+  ======================================================= -->
+
   <style>
 
-    /* =========================================================
+    /* ======================================================
        ROOT
-    ========================================================= */
+    ======================================================= */
 
     :root {
-      --bg: #07111f;
-      --bg-soft: #0b1728;
-      --card: #0d1b2d;
-      --border: rgba(255, 255, 255, 0.09);
 
-      --text: #f4f7fb;
-      --muted: #a8b5c7;
+      --bg:
+        #07111f;
 
-      --accent: #63b3ff;
-      --accent-soft: rgba(99, 179, 255, 0.12);
+      --bg-2:
+        #091625;
 
-      --max-width: 1100px;
+      --surface:
+        rgba(255, 255, 255, 0.045);
+
+      --surface-strong:
+        rgba(255, 255, 255, 0.065);
+
+      --border:
+        rgba(255, 255, 255, 0.09);
+
+      --border-light:
+        rgba(255, 255, 255, 0.13);
+
+      --text:
+        #f5f8fc;
+
+      --muted:
+        #9eacc0;
+
+      --muted-light:
+        #bdc8d7;
+
+      --accent:
+        #63b3ff;
+
+      --accent-bright:
+        #78c0ff;
+
+      --accent-soft:
+        rgba(99, 179, 255, 0.11);
+
+      --accent-glow:
+        rgba(99, 179, 255, 0.20);
+
+      --max:
+        1160px;
+
+      --radius:
+        20px;
     }
 
 
-    /* =========================================================
+    /* ======================================================
        RESET
-    ========================================================= */
+    ======================================================= */
 
     * {
       margin: 0;
@@ -115,11 +207,16 @@
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
+
+      min-height: 100vh;
+
       font-family:
         Inter,
         -apple-system,
@@ -130,742 +227,1875 @@
         Arial,
         sans-serif;
 
-      background: var(--bg);
-      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 75% 15%,
+          rgba(99, 179, 255, 0.08),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 15% 40%,
+          rgba(99, 179, 255, 0.035),
+          transparent 30%
+        ),
+        var(--bg);
 
-      line-height: 1.6;
+      color:
+        var(--text);
 
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      line-height:
+        1.6;
+
+      -webkit-font-smoothing:
+        antialiased;
+
+      text-rendering:
+        optimizeLegibility;
     }
+
+
+    body::before {
+
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.018) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.018) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        70px 70px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black,
+          transparent 75%
+        );
+
+      opacity:
+        0.35;
+
+      z-index:
+        -1;
+    }
+
 
     a {
-      color: inherit;
-      text-decoration: none;
+      color:
+        inherit;
+
+      text-decoration:
+        none;
     }
+
 
     img {
-      max-width: 100%;
-      display: block;
+      display:
+        block;
+
+      max-width:
+        100%;
     }
 
 
-    /* =========================================================
+    /* ======================================================
        CONTAINER
-    ========================================================= */
+    ======================================================= */
 
     .container {
-      width: min(
-        calc(100% - 40px),
-        var(--max-width)
-      );
 
-      margin: 0 auto;
+      width:
+        min(
+          calc(100% - 48px),
+          var(--max)
+        );
+
+      margin:
+        0 auto;
     }
 
 
-    /* =========================================================
-       NAVBAR
-    ========================================================= */
+    /* ======================================================
+       NAVIGATION
+    ======================================================= */
 
     nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
 
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      position:
+        sticky;
 
-      background: rgba(7, 17, 31, 0.82);
+      top:
+        0;
 
-      border-bottom: 1px solid var(--border);
+      z-index:
+        1000;
+
+      background:
+        rgba(7, 17, 31, 0.78);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      border-bottom:
+        1px solid var(--border);
     }
+
 
     .nav-inner {
-      min-height: 74px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
+      height:
+        76px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
     }
+
 
     .brand {
-      font-size: 1.15rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      font-size:
+        1.12rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        -0.025em;
     }
+
+
+    .brand-mark {
+
+      width:
+        32px;
+
+      height:
+        32px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border:
+        1px solid
+        rgba(99, 179, 255, 0.35);
+
+      border-radius:
+        9px;
+
+      color:
+        var(--accent);
+
+      background:
+        var(--accent-soft);
+
+      font-size:
+        0.75rem;
+
+      font-weight:
+        900;
+    }
+
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        30px;
     }
+
 
     .nav-links a {
-      color: var(--muted);
 
-      font-size: 0.92rem;
-      font-weight: 600;
+      position:
+        relative;
+
+      color:
+        var(--muted-light);
+
+      font-size:
+        0.9rem;
+
+      font-weight:
+        600;
 
       transition:
-        color 0.2s ease,
-        opacity 0.2s ease;
+        color 0.2s ease;
     }
+
+
+    .nav-links a::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        0;
+
+      bottom:
+        -8px;
+
+      width:
+        0;
+
+      height:
+        2px;
+
+      background:
+        var(--accent);
+
+      transition:
+        width 0.2s ease;
+    }
+
 
     .nav-links a:hover {
-      color: var(--text);
+
+      color:
+        var(--text);
     }
 
 
-    /* =========================================================
+    .nav-links a:hover::after {
+
+      width:
+        100%;
+    }
+
+
+    /* ======================================================
        HERO
-    ========================================================= */
+    ======================================================= */
 
     .hero {
-      min-height: calc(100vh - 74px);
 
-      display: grid;
+      min-height:
+        calc(100vh - 76px);
+
+      display:
+        grid;
 
       grid-template-columns:
-        minmax(0, 1fr)
-        280px;
+        minmax(0, 1.15fr)
+        minmax(300px, 0.85fr);
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 70px;
+      gap:
+        70px;
 
       padding:
-        90px 0
-        110px;
+        90px 0 105px;
+
+      position:
+        relative;
     }
+
 
     .hero-content {
-      max-width: 760px;
+
+      max-width:
+        720px;
     }
 
-    .eyebrow {
-      color: var(--accent);
 
-      font-size: 1.2rem;
-      font-weight: 800;
+    .hero-kicker {
 
-      letter-spacing: 0.08em;
+      display:
+        inline-flex;
 
-      margin-bottom: 20px;
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      margin-bottom:
+        22px;
+
+      color:
+        var(--accent);
+
+      font-size:
+        1.08rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        0.025em;
     }
 
-    h1 {
-      font-size: clamp(
-        3rem,
-        8vw,
-        6.5rem
-      );
 
-      line-height: 0.95;
+    .hero-kicker::before {
 
-      letter-spacing: -0.065em;
+      content:
+        "";
 
-      font-weight: 800;
+      width:
+        30px;
+
+      height:
+        2px;
+
+      background:
+        var(--accent);
+
+      border-radius:
+        999px;
     }
 
-    h1 span {
-      display: block;
 
-      color: var(--accent);
+    .hero h1 {
+
+      font-size:
+        clamp(
+          3.2rem,
+          6vw,
+          5.35rem
+        );
+
+      line-height:
+        0.98;
+
+      letter-spacing:
+        -0.065em;
+
+      font-weight:
+        850;
     }
 
-    .hero-text {
-      max-width: 680px;
 
-      margin-top: 30px;
+    .hero h1 .accent {
 
-      color: var(--muted);
+      display:
+        block;
 
-      font-size: 1.08rem;
-
-      line-height: 1.8;
+      color:
+        var(--accent);
     }
+
+
+    .hero-description {
+
+      max-width:
+        680px;
+
+      margin-top:
+        28px;
+
+      color:
+        var(--muted-light);
+
+      font-size:
+        1.03rem;
+
+      line-height:
+        1.8;
+    }
+
+
+    .hero-description strong {
+
+      color:
+        var(--text);
+
+      font-weight:
+        650;
+    }
+
 
     .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
 
-      gap: 14px;
+      display:
+        flex;
 
-      margin-top: 34px;
+      flex-wrap:
+        wrap;
+
+      gap:
+        12px;
+
+      margin-top:
+        32px;
     }
 
 
-    /* =========================================================
+    /* ======================================================
        BUTTONS
-    ========================================================= */
+    ======================================================= */
 
     .btn {
-      display: inline-flex;
 
-      align-items: center;
-      justify-content: center;
+      min-height:
+        48px;
 
-      min-height: 48px;
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        9px;
 
       padding:
-        0 20px;
+        0 19px;
 
-      border-radius: 10px;
+      border:
+        1px solid var(--border-light);
 
-      border: 1px solid var(--border);
+      border-radius:
+        11px;
 
-      font-size: 0.92rem;
-      font-weight: 700;
+      font-size:
+        0.9rem;
+
+      font-weight:
+        750;
 
       transition:
         transform 0.2s ease,
         background 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
     }
+
 
     .btn:hover {
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
     }
+
 
     .btn-primary {
-      background: var(--accent);
-      color: #06111e;
 
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      background: #83c5ff;
-      border-color: #83c5ff;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-    }
-
-    .btn-secondary:hover {
-      background: var(--accent-soft);
-      border-color: rgba(99, 179, 255, 0.3);
-    }
-
-
-    /* =========================================================
-       PROFILE PHOTO
-    ========================================================= */
-
-    .photo-wrapper {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-    }
-
-    .photo-placeholder {
-      width: 260px;
-      height: 260px;
-
-      border-radius: 50%;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-
-      padding: 30px;
-
-      color: var(--muted);
-
-      font-size: 0.9rem;
-
-      border:
-        1px dashed
-        rgba(99, 179, 255, 0.35);
+      color:
+        #06111e;
 
       background:
-        radial-gradient(
-          circle at center,
-          rgba(99, 179, 255, 0.09),
-          transparent 65%
+        var(--accent);
+
+      border-color:
+        var(--accent);
+
+      box-shadow:
+        0 10px 30px
+        rgba(99, 179, 255, 0.12);
+    }
+
+
+    .btn-primary:hover {
+
+      background:
+        var(--accent-bright);
+
+      border-color:
+        var(--accent-bright);
+
+      box-shadow:
+        0 14px 36px
+        rgba(99, 179, 255, 0.18);
+    }
+
+
+    .btn-secondary {
+
+      color:
+        var(--text);
+
+      background:
+        rgba(255, 255, 255, 0.025);
+    }
+
+
+    .btn-secondary:hover {
+
+      background:
+        var(--accent-soft);
+
+      border-color:
+        rgba(99, 179, 255, 0.28);
+    }
+
+
+    /* ======================================================
+       HERO PHOTO
+    ======================================================= */
+
+    .hero-visual {
+
+      display:
+        flex;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      position:
+        relative;
+    }
+
+
+    .photo-card {
+
+      position:
+        relative;
+
+      width:
+        330px;
+
+      height:
+        400px;
+
+      padding:
+        10px;
+
+      border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+      border-radius:
+        28px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.09),
+          rgba(255,255,255,0.025)
+        );
+
+      box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.28);
+
+      transform:
+        rotate(1.5deg);
+    }
+
+
+    .photo-card::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        -1px;
+
+      border-radius:
+        28px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(99,179,255,0.55),
+          transparent 38%,
+          transparent 70%,
+          rgba(99,179,255,0.12)
+        );
+
+      opacity:
+        0.7;
+
+      pointer-events:
+        none;
+    }
+
+
+    .photo-frame {
+
+      position:
+        relative;
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      overflow:
+        hidden;
+
+      border-radius:
+        21px;
+
+      background:
+        #0b1829;
+
+      z-index:
+        1;
+    }
+
+
+    .profile-photo {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center top;
+
+      filter:
+        saturate(0.96)
+        contrast(1.02);
+    }
+
+
+    .photo-overlay {
+
+      position:
+        absolute;
+
+      inset:
+        auto 0 0;
+
+      height:
+        38%;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(3, 10, 19, 0.82),
+          transparent
+        );
+
+      pointer-events:
+        none;
+    }
+
+
+    .photo-caption {
+
+      position:
+        absolute;
+
+      left:
+        24px;
+
+      right:
+        24px;
+
+      bottom:
+        20px;
+
+      z-index:
+        3;
+    }
+
+
+    .photo-caption small {
+
+      display:
+        block;
+
+      color:
+        rgba(255,255,255,0.65);
+
+      font-size:
+        0.72rem;
+
+      letter-spacing:
+        0.12em;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .photo-caption strong {
+
+      display:
+        block;
+
+      margin-top:
+        3px;
+
+      color:
+        white;
+
+      font-size:
+        1rem;
+
+      font-weight:
+        750;
+    }
+
+
+    /* ======================================================
+       SCROLL INDICATOR
+    ======================================================= */
+
+    .scroll-note {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        9px;
+
+      margin-top:
+        42px;
+
+      color:
+        #6f7f94;
+
+      font-size:
+        0.75rem;
+
+      letter-spacing:
+        0.08em;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .scroll-line {
+
+      width:
+        32px;
+
+      height:
+        1px;
+
+      background:
+        #53647a;
+    }
+
+
+    /* ======================================================
+       SECTION
+    ======================================================= */
+
+    section {
+
+      padding:
+        105px 0;
+
+      border-top:
+        1px solid var(--border);
+    }
+
+
+    .section-header {
+
+      max-width:
+        750px;
+
+      margin-bottom:
+        48px;
+    }
+
+
+    .section-label {
+
+      margin-bottom:
+        13px;
+
+      color:
+        var(--accent);
+
+      font-size:
+        0.75rem;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        0.16em;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .section-header h2 {
+
+      font-size:
+        clamp(
+          2.1rem,
+          4.2vw,
+          3.5rem
+        );
+
+      line-height:
+        1.05;
+
+      letter-spacing:
+        -0.045em;
+
+      font-weight:
+        800;
+    }
+
+
+    .section-header p {
+
+      margin-top:
+        17px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        1rem;
+
+      line-height:
+        1.8;
+    }
+
+
+    /* ======================================================
+       ABOUT
+    ======================================================= */
+
+    .about-layout {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.05fr
+        0.95fr;
+
+      gap:
+        20px;
+    }
+
+
+    .about-main {
+
+      padding:
+        34px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.055),
+          rgba(255,255,255,0.018)
         );
     }
 
 
-    /* =========================================================
-       SECTIONS
-    ========================================================= */
+    .about-main p {
 
-    section {
-      padding: 100px 0;
+      color:
+        var(--muted-light);
 
-      border-top:
-        1px solid
-        var(--border);
-    }
+      font-size:
+        1rem;
 
-    .section-heading {
-      margin-bottom: 45px;
-    }
-
-    .section-label {
-      color: var(--accent);
-
-      font-size: 0.78rem;
-
-      font-weight: 800;
-
-      letter-spacing: 0.15em;
-
-      text-transform: uppercase;
-
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-size: clamp(
-        2rem,
-        5vw,
-        3.6rem
-      );
-
-      line-height: 1.05;
-
-      letter-spacing: -0.04em;
-    }
-
-    .section-intro {
-      max-width: 760px;
-
-      margin-top: 18px;
-
-      color: var(--muted);
-
-      font-size: 1.02rem;
-
-      line-height: 1.8;
+      line-height:
+        1.9;
     }
 
 
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+    .about-main p + p {
+
+      margin-top:
+        18px;
+    }
+
 
     .about-grid {
-      display: grid;
 
-      grid-template-columns:
-        1.25fr
-        0.75fr;
-
-      gap: 24px;
-    }
-
-    .about-text {
-      padding: 32px;
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius: 18px;
-
-      background: var(--card);
-    }
-
-    .about-text p {
-      color: var(--muted);
-
-      font-size: 1.05rem;
-
-      line-height: 1.9;
-    }
-
-    .about-cards {
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(2, 1fr);
 
-      gap: 16px;
-    }
-
-    .about-card {
-      padding: 25px;
-
-      min-height: 150px;
-
-      border:
-        1px solid
-        var(--border);
-
-      border-radius: 16px;
-
-      background: var(--card);
-    }
-
-    .about-card h3 {
-      font-size: 1rem;
-
-      margin-bottom: 10px;
-    }
-
-    .about-card p {
-      color: var(--muted);
-
-      font-size: 0.88rem;
-
-      line-height: 1.6;
+      gap:
+        14px;
     }
 
 
-    /* =========================================================
-       EXPERTISE
-    ========================================================= */
+    .mini-card {
 
-    .skills {
-      display: flex;
+      min-height:
+        170px;
 
-      flex-wrap: wrap;
-
-      gap: 12px;
-    }
-
-    .skill {
       padding:
-        10px 15px;
+        24px;
 
       border:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
-      border-radius: 999px;
+      border-radius:
+        17px;
 
       background:
-        rgba(255, 255, 255, 0.025);
+        var(--surface);
 
-      color: #dce6f2;
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+    }
 
-      font-size: 0.9rem;
+
+    .mini-card:hover {
+
+      transform:
+        translateY(-3px);
+
+      border-color:
+        rgba(99,179,255,0.25);
+
+      background:
+        var(--surface-strong);
+    }
+
+
+    .mini-icon {
+
+      width:
+        38px;
+
+      height:
+        38px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      border:
+        1px solid
+        rgba(99,179,255,0.22);
+
+      border-radius:
+        10px;
+
+      color:
+        var(--accent);
+
+      background:
+        var(--accent-soft);
+
+      font-size:
+        0.8rem;
+
+      font-weight:
+        900;
+
+      margin-bottom:
+        20px;
+    }
+
+
+    .mini-card h3 {
+
+      font-size:
+        1rem;
+
+      margin-bottom:
+        8px;
+    }
+
+
+    .mini-card p {
+
+      color:
+        var(--muted);
+
+      font-size:
+        0.84rem;
+
+      line-height:
+        1.65;
+    }
+
+
+    /* ======================================================
+       EXPERTISE
+    ======================================================= */
+
+    .expertise-wrap {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        0.75fr
+        1.25fr;
+
+      gap:
+        50px;
+
+      align-items:
+        start;
+    }
+
+
+    .expertise-copy p {
+
+      color:
+        var(--muted);
+
+      line-height:
+        1.85;
+
+      font-size:
+        0.98rem;
+    }
+
+
+    .skills {
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        10px;
+    }
+
+
+    .skill {
+
+      padding:
+        10px 14px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        999px;
+
+      color:
+        #dce6f2;
+
+      background:
+        rgba(255,255,255,0.025);
+
+      font-size:
+        0.85rem;
+
+      font-weight:
+        600;
 
       transition:
         background 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        transform 0.2s ease;
     }
+
 
     .skill:hover {
-      background: var(--accent-soft);
+
+      transform:
+        translateY(-2px);
+
+      background:
+        var(--accent-soft);
 
       border-color:
-        rgba(99, 179, 255, 0.25);
+        rgba(99,179,255,0.25);
     }
 
 
-    /* =========================================================
+    /* ======================================================
        WORK
-    ========================================================= */
+    ======================================================= */
 
     .work-grid {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         repeat(2, 1fr);
 
-      gap: 18px;
+      gap:
+        16px;
     }
 
-    .work-card {
-      padding: 30px;
 
-      min-height: 210px;
+    .work-card {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      min-height:
+        230px;
+
+      padding:
+        30px;
 
       border:
-        1px solid
-        var(--border);
+        1px solid var(--border);
 
-      border-radius: 18px;
+      border-radius:
+        var(--radius);
 
-      background: var(--card);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.05),
+          rgba(255,255,255,0.018)
+        );
 
       transition:
         transform 0.25s ease,
         border-color 0.25s ease;
     }
 
+
+    .work-card::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        150px;
+
+      height:
+        150px;
+
+      right:
+        -80px;
+
+      bottom:
+        -80px;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--accent-glow);
+
+      filter:
+        blur(40px);
+
+      opacity:
+        0;
+
+      transition:
+        opacity 0.25s ease;
+    }
+
+
     .work-card:hover {
-      transform: translateY(-4px);
+
+      transform:
+        translateY(-4px);
 
       border-color:
-        rgba(99, 179, 255, 0.28);
+        rgba(99,179,255,0.24);
     }
+
+
+    .work-card:hover::after {
+
+      opacity:
+        0.7;
+    }
+
 
     .work-number {
-      color: var(--accent);
 
-      font-size: 0.78rem;
+      color:
+        var(--accent);
 
-      font-weight: 800;
+      font-size:
+        0.7rem;
 
-      letter-spacing: 0.12em;
+      font-weight:
+        850;
 
-      margin-bottom: 22px;
+      letter-spacing:
+        0.16em;
+
+      margin-bottom:
+        35px;
     }
+
 
     .work-card h3 {
-      font-size: 1.35rem;
 
-      margin-bottom: 12px;
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      font-size:
+        1.25rem;
+
+      margin-bottom:
+        11px;
     }
+
 
     .work-card p {
-      color: var(--muted);
 
-      line-height: 1.7;
+      position:
+        relative;
 
-      font-size: 0.95rem;
+      z-index:
+        2;
+
+      max-width:
+        480px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        0.9rem;
+
+      line-height:
+        1.75;
     }
 
 
-    /* =========================================================
+    /* ======================================================
        CONTACT
-    ========================================================= */
+    ======================================================= */
 
     .contact-box {
-      padding: 40px;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      padding:
+        55px;
 
       border:
         1px solid
-        var(--border);
+        rgba(99,179,255,0.16);
 
-      border-radius: 20px;
+      border-radius:
+        24px;
 
       background:
         linear-gradient(
           135deg,
-          rgba(99, 179, 255, 0.08),
-          rgba(255, 255, 255, 0.02)
+          rgba(99,179,255,0.09),
+          rgba(255,255,255,0.025)
         );
     }
 
+
+    .contact-box::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        300px;
+
+      height:
+        300px;
+
+      right:
+        -120px;
+
+      top:
+        -150px;
+
+      border-radius:
+        50%;
+
+      background:
+        rgba(99,179,255,0.12);
+
+      filter:
+        blur(50px);
+    }
+
+
+    .contact-content {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+    }
+
+
     .contact-box h2 {
-      max-width: 750px;
+
+      max-width:
+        750px;
+
+      font-size:
+        clamp(
+          2.1rem,
+          4.5vw,
+          3.8rem
+        );
+
+      line-height:
+        1.05;
+
+      letter-spacing:
+        -0.05em;
     }
 
-    .contact-text {
-      max-width: 700px;
 
-      margin-top: 18px;
+    .contact-box p {
 
-      color: var(--muted);
+      max-width:
+        650px;
 
-      line-height: 1.8;
+      margin-top:
+        18px;
+
+      color:
+        var(--muted-light);
+
+      line-height:
+        1.8;
     }
+
 
     .contact-links {
-      display: flex;
 
-      flex-wrap: wrap;
+      display:
+        flex;
 
-      gap: 12px;
+      flex-wrap:
+        wrap;
 
-      margin-top: 30px;
+      gap:
+        10px;
+
+      margin-top:
+        30px;
     }
+
 
     .languages {
-      margin-top: 30px;
 
-      color: var(--muted);
+      margin-top:
+        28px;
 
-      font-size: 0.92rem;
+      color:
+        var(--muted);
+
+      font-size:
+        0.86rem;
     }
+
 
     .languages strong {
-      color: var(--text);
+
+      color:
+        var(--text);
     }
 
 
-    /* =========================================================
+    /* ======================================================
        FOOTER
-    ========================================================= */
+    ======================================================= */
 
     footer {
+
       padding:
-        30px 0
-        40px;
-
-      color: #718198;
-
-      font-size: 0.82rem;
-
-      text-align: center;
+        32px 0 42px;
 
       border-top:
-        1px solid
-        var(--border);
+        1px solid var(--border);
+
+      color:
+        #68788e;
+
+      font-size:
+        0.78rem;
+
+      text-align:
+        center;
     }
 
 
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
+    /* ======================================================
+       RESPONSIVE — TABLET
+    ======================================================= */
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
 
       .hero {
-        grid-template-columns: 1fr;
 
-        gap: 55px;
+        grid-template-columns:
+          1fr;
 
-        padding-top: 70px;
+        gap:
+          55px;
+
+        padding:
+          75px 0 90px;
       }
 
-      .photo-wrapper {
-        justify-content: flex-start;
+
+      .hero-content {
+
+        max-width:
+          800px;
       }
 
-      .about-grid {
-        grid-template-columns: 1fr;
+
+      .hero-visual {
+
+        justify-content:
+          flex-start;
+      }
+
+
+      .photo-card {
+
+        width:
+          290px;
+
+        height:
+          350px;
+      }
+
+
+      .about-layout {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .expertise-wrap {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          28px;
       }
 
     }
 
+
+    /* ======================================================
+       RESPONSIVE — MOBILE
+    ======================================================= */
 
     @media (max-width: 700px) {
 
       .container {
+
         width:
           min(
-            calc(100% - 28px),
-            var(--max-width)
+            calc(100% - 30px),
+            var(--max)
           );
       }
+
 
       .nav-inner {
-        min-height: 66px;
-      }
 
-      .nav-links {
-        gap: 14px;
-      }
+        height:
+          auto;
 
-      .nav-links a {
-        font-size: 0.8rem;
-      }
-
-      .hero {
-        min-height: auto;
+        min-height:
+          68px;
 
         padding:
-          65px 0
-          80px;
+          14px 0;
+
+        gap:
+          14px;
       }
 
-      .eyebrow {
-        font-size: 1.05rem;
 
-        letter-spacing: 0.06em;
+      .nav-links {
 
-        margin-bottom: 17px;
+        gap:
+          15px;
       }
 
-      h1 {
+
+      .nav-links a {
+
+        font-size:
+          0.78rem;
+      }
+
+
+      .nav-links a::after {
+
+        display:
+          none;
+      }
+
+
+      .hero {
+
+        padding:
+          58px 0 75px;
+      }
+
+
+      .hero-kicker {
+
+        font-size:
+          1rem;
+
+        margin-bottom:
+          18px;
+      }
+
+
+      .hero-kicker::before {
+
+        width:
+          23px;
+      }
+
+
+      .hero h1 {
+
         font-size:
           clamp(
-            2.8rem,
-            14vw,
-            4.5rem
+            2.75rem,
+            13vw,
+            4.3rem
           );
+
+        line-height:
+          0.99;
       }
 
-      .hero-text {
-        font-size: 0.98rem;
+
+      .hero-description {
+
+        margin-top:
+          22px;
+
+        font-size:
+          0.94rem;
+
+        line-height:
+          1.75;
       }
 
-      .photo-placeholder {
-        width: 220px;
-        height: 220px;
+
+      .hero-actions {
+
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
       }
+
+
+      .hero-actions .btn {
+
+        width:
+          100%;
+      }
+
+
+      .scroll-note {
+
+        margin-top:
+          30px;
+      }
+
+
+      .hero-visual {
+
+        justify-content:
+          center;
+      }
+
+
+      .photo-card {
+
+        width:
+          min(100%, 310px);
+
+        height:
+          375px;
+      }
+
 
       section {
-        padding: 75px 0;
+
+        padding:
+          78px 0;
       }
 
-      .about-cards {
-        grid-template-columns: 1fr;
+
+      .section-header {
+
+        margin-bottom:
+          35px;
       }
+
+
+      .section-header h2 {
+
+        font-size:
+          2.35rem;
+      }
+
+
+      .about-grid {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .about-main {
+
+        padding:
+          26px;
+      }
+
+
+      .mini-card {
+
+        min-height:
+          150px;
+      }
+
 
       .work-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
 
+
+      .work-card {
+
+        min-height:
+          205px;
+
+        padding:
+          26px;
+      }
+
+
       .contact-box {
-        padding: 28px;
+
+        padding:
+          32px 25px;
+      }
+
+
+      .contact-links {
+
+        flex-direction:
+          column;
+      }
+
+
+      .contact-links .btn {
+
+        width:
+          100%;
       }
 
     }
 
 
+    /* ======================================================
+       RESPONSIVE — SMALL PHONE
+    ======================================================= */
+
     @media (max-width: 480px) {
 
-      .nav-inner {
-        flex-direction: column;
+      .brand {
 
-        align-items: flex-start;
-
-        padding:
-          17px 0;
+        font-size:
+          1rem;
       }
+
+
+      .brand-mark {
+
+        width:
+          29px;
+
+        height:
+          29px;
+      }
+
+
+      .nav-inner {
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+      }
+
 
       .nav-links {
-        width: 100%;
 
-        justify-content: space-between;
+        width:
+          100%;
 
-        gap: 8px;
+        justify-content:
+          space-between;
       }
 
-      .hero-actions {
-        flex-direction: column;
 
-        align-items: stretch;
+      .nav-links a {
+
+        font-size:
+          0.76rem;
       }
 
-      .btn {
-        width: 100%;
+
+      .hero {
+
+        padding-top:
+          48px;
       }
 
-      .contact-links {
-        flex-direction: column;
+
+      .hero-kicker {
+
+        font-size:
+          0.95rem;
       }
 
-      .contact-links .btn {
-        width: 100%;
+
+      .photo-card {
+
+        width:
+          270px;
+
+        height:
+          330px;
+      }
+
+
+      .contact-box h2 {
+
+        font-size:
+          2.3rem;
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- =======================================================
+
+  <!-- ======================================================
        NAVIGATION
-  ======================================================== -->
+  ======================================================= -->
 
   <nav>
+
     <div class="container nav-inner">
+
 
       <a
         href="#top"
         class="brand"
+        aria-label="Abdul Vajid EK home"
       >
-        Vajid EK
+
+        <span class="brand-mark">
+          VE
+        </span>
+
+        <span>
+          Vajid EK
+        </span>
+
       </a>
+
 
       <div class="nav-links">
 
@@ -888,41 +2118,67 @@
       </div>
 
     </div>
+
   </nav>
+
 
 
   <main id="top">
 
-    <!-- =====================================================
+
+    <!-- ====================================================
          HERO
-    ====================================================== -->
+    ===================================================== -->
 
     <header class="container hero">
 
+
       <div class="hero-content">
 
-        <div class="eyebrow">
+
+        <div class="hero-kicker">
           Abdul Vajid EK
         </div>
 
+
         <h1>
+
           Project &amp; Department
-          <span>Coordinator.</span>
+
+          <span class="accent">
+            Coordinator.
+          </span>
+
         </h1>
 
-        <p class="hero-text">
-          Construction &amp; Infrastructure · Engineering &amp;
-          Project Operations · ERP &amp; Digital Systems
+
+        <p class="hero-description">
+
+          <strong>
+            Construction &amp; Infrastructure
+          </strong>
+          · Engineering &amp; Project Operations
+          · ERP &amp; Digital Systems
+
         </p>
 
+
         <div class="hero-actions">
+
 
           <a
             href="#about"
             class="btn btn-primary"
           >
+
             Explore Profile
+
+            <span>
+              →
+            </span>
+
           </a>
+
 
           <a
             href="#contact"
@@ -931,33 +2187,82 @@
             Connect
           </a>
 
+
         </div>
+
+
+        <div class="scroll-note">
+
+          <span class="scroll-line"></span>
+
+          Scroll to explore
+
+        </div>
+
 
       </div>
 
 
-      <!-- Profile photo will be added here -->
 
-      <div class="photo-wrapper">
+      <!-- ==================================================
+           PROFILE IMAGE
+      =================================================== -->
 
-        <div class="photo-placeholder">
-          Professional profile photo
+      <div class="hero-visual">
+
+
+        <div class="photo-card">
+
+
+          <div class="photo-frame">
+
+
+            <img
+              src="profile.jpg"
+              alt="Abdul Vajid EK — Project & Department Coordinator"
+              class="profile-photo"
+            >
+
+
+            <div class="photo-overlay"></div>
+
+
+            <div class="photo-caption">
+
+              <small>
+                Professional Profile
+              </small>
+
+              <strong>
+                Abdul Vajid EK
+              </strong>
+
+            </div>
+
+
+          </div>
+
+
         </div>
 
+
       </div>
+
 
     </header>
 
 
-    <!-- =====================================================
+
+    <!-- ====================================================
          ABOUT
-    ====================================================== -->
+    ===================================================== -->
 
     <section id="about">
 
       <div class="container">
 
-        <div class="section-heading">
+
+        <div class="section-header">
 
           <div class="section-label">
             About
@@ -968,7 +2273,7 @@
             operations &amp; systems.
           </h2>
 
-          <p class="section-intro">
+          <p>
             Abdul Vajid EK, professionally known as Vajid EK,
             works in project and department coordination across
             construction and infrastructure operations, supporting
@@ -979,9 +2284,11 @@
         </div>
 
 
-        <div class="about-grid">
 
-          <div class="about-text">
+        <div class="about-layout">
+
+
+          <div class="about-main">
 
             <p>
               The work involves coordinating people, information,
@@ -990,22 +2297,26 @@
               requirements and improving digital workflows.
             </p>
 
-            <br>
-
             <p>
               Areas of involvement include construction and
               infrastructure operations, project coordination,
-              BOQ and tender support, procurement-related
-              activities, ERP systems, digital platforms,
-              automation and project documentation.
+              BOQ and tender support, procurement-related activities,
+              ERP systems, digital platforms, automation and
+              project documentation.
             </p>
 
           </div>
 
 
-          <div class="about-cards">
 
-            <div class="about-card">
+          <div class="about-grid">
+
+
+            <div class="mini-card">
+
+              <div class="mini-icon">
+                01
+              </div>
 
               <h3>
                 Project Coordination
@@ -1019,7 +2330,11 @@
             </div>
 
 
-            <div class="about-card">
+            <div class="mini-card">
+
+              <div class="mini-icon">
+                02
+              </div>
 
               <h3>
                 Management Support
@@ -1033,7 +2348,11 @@
             </div>
 
 
-            <div class="about-card">
+            <div class="mini-card">
+
+              <div class="mini-icon">
+                03
+              </div>
 
               <h3>
                 Official Coordination
@@ -1047,7 +2366,11 @@
             </div>
 
 
-            <div class="about-card">
+            <div class="mini-card">
+
+              <div class="mini-icon">
+                04
+              </div>
 
               <h3>
                 ERP &amp; Digital Systems
@@ -1060,6 +2383,7 @@
 
             </div>
 
+
           </div>
 
         </div>
@@ -1069,15 +2393,17 @@
     </section>
 
 
-    <!-- =====================================================
+
+    <!-- ====================================================
          EXPERTISE
-    ====================================================== -->
+    ===================================================== -->
 
     <section id="expertise">
 
       <div class="container">
 
-        <div class="section-heading">
+
+        <div class="section-header">
 
           <div class="section-label">
             Expertise
@@ -1087,64 +2413,79 @@
             Areas of work.
           </h2>
 
-          <p class="section-intro">
-            A combination of project coordination,
-            infrastructure operations, documentation,
-            procurement support and digital systems.
-          </p>
-
         </div>
 
 
-        <div class="skills">
 
-          <span class="skill">
-            Project Coordination
-          </span>
+        <div class="expertise-wrap">
 
-          <span class="skill">
-            Department Coordination
-          </span>
 
-          <span class="skill">
-            Construction &amp; Infrastructure
-          </span>
+          <div class="expertise-copy">
 
-          <span class="skill">
-            Project Operations
-          </span>
+            <p>
+              A combination of project coordination,
+              infrastructure operations, documentation,
+              procurement support and digital systems.
+            </p>
 
-          <span class="skill">
-            Engineering Operations
-          </span>
+          </div>
 
-          <span class="skill">
-            BOQ Analysis
-          </span>
 
-          <span class="skill">
-            Tender &amp; Procurement Support
-          </span>
 
-          <span class="skill">
-            Project Documentation
-          </span>
+          <div class="skills">
 
-          <span class="skill">
-            ERP Development
-          </span>
 
-          <span class="skill">
-            Digital Systems
-          </span>
+            <span class="skill">
+              Project Coordination
+            </span>
 
-          <span class="skill">
-            AI Automation
-          </span>
+            <span class="skill">
+              Department Coordination
+            </span>
 
-          <span class="skill">
-            SCADA &amp; Industrial Automation
-          </span>
+            <span class="skill">
+              Construction &amp; Infrastructure
+            </span>
+
+            <span class="skill">
+              Project Operations
+            </span>
+
+            <span class="skill">
+              Engineering Operations
+            </span>
+
+            <span class="skill">
+              BOQ Analysis
+            </span>
+
+            <span class="skill">
+              Tender &amp; Procurement Support
+            </span>
+
+            <span class="skill">
+              Project Documentation
+            </span>
+
+            <span class="skill">
+              ERP Development
+            </span>
+
+            <span class="skill">
+              Digital Systems
+            </span>
+
+            <span class="skill">
+              AI Automation
+            </span>
+
+            <span class="skill">
+              SCADA &amp; Industrial Automation
+            </span>
+
+
+          </div>
+
 
         </div>
 
@@ -1153,15 +2494,17 @@
     </section>
 
 
-    <!-- =====================================================
+
+    <!-- ====================================================
          WORK
-    ====================================================== -->
+    ===================================================== -->
 
     <section id="work">
 
       <div class="container">
 
-        <div class="section-heading">
+
+        <div class="section-header">
 
           <div class="section-label">
             Work
@@ -1171,12 +2514,13 @@
             Professional focus.
           </h2>
 
-          <p class="section-intro">
+          <p>
             Work areas spanning physical infrastructure,
             project operations and technology-driven systems.
           </p>
 
         </div>
+
 
 
         <div class="work-grid">
@@ -1185,7 +2529,7 @@
           <article class="work-card">
 
             <div class="work-number">
-              01
+              01 / INFRASTRUCTURE
             </div>
 
             <h3>
@@ -1201,10 +2545,11 @@
           </article>
 
 
+
           <article class="work-card">
 
             <div class="work-number">
-              02
+              02 / OPERATIONS
             </div>
 
             <h3>
@@ -1220,10 +2565,11 @@
           </article>
 
 
+
           <article class="work-card">
 
             <div class="work-number">
-              03
+              03 / DIGITAL
             </div>
 
             <h3>
@@ -1239,10 +2585,11 @@
           </article>
 
 
+
           <article class="work-card">
 
             <div class="work-number">
-              04
+              04 / AUTOMATION
             </div>
 
             <h3>
@@ -1265,93 +2612,109 @@
     </section>
 
 
-    <!-- =====================================================
+
+    <!-- ====================================================
          CONTACT
-    ====================================================== -->
+    ===================================================== -->
 
     <section id="contact">
 
       <div class="container">
 
+
         <div class="contact-box">
 
-          <div class="section-label">
-            Contact
+
+          <div class="contact-content">
+
+
+            <div class="section-label">
+              Contact
+            </div>
+
+
+            <h2>
+              Connect with
+              Abdul Vajid EK.
+            </h2>
+
+
+            <p>
+              For professional communication, project-related
+              discussions, technology and digital systems,
+              or collaboration.
+            </p>
+
+
+
+            <div class="contact-links">
+
+
+              <a
+                href="mailto:vajidek1@gmail.com"
+                class="btn btn-primary"
+              >
+                Email
+              </a>
+
+
+              <a
+                href="https://www.linkedin.com/in/abdul-vajid-ek-a75b07234/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                LinkedIn
+              </a>
+
+
+              <a
+                href="https://www.instagram.com/vajid.ek"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                Instagram
+              </a>
+
+
+              <a
+                href="https://www.facebook.com/abdul.v.ek/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                Facebook
+              </a>
+
+
+              <a
+                href="https://github.com/vajidek"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+              >
+                GitHub
+              </a>
+
+
+            </div>
+
+
+
+            <div class="languages">
+
+              <strong>
+                Languages:
+              </strong>
+
+              Malayalam · English · Hindi · Tamil
+
+            </div>
+
+
           </div>
 
-          <h2>
-            Connect with
-            Abdul Vajid EK.
-          </h2>
-
-          <p class="contact-text">
-            For professional communication, project-related
-            discussions, technology and digital systems,
-            or collaboration.
-          </p>
-
-
-          <div class="contact-links">
-
-            <a
-              href="mailto:vajidek1@gmail.com"
-              class="btn btn-primary"
-            >
-              Email
-            </a>
-
-
-            <a
-              href="https://www.linkedin.com/in/abdul-vajid-ek-a75b07234/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
-              LinkedIn
-            </a>
-
-
-            <a
-              href="https://www.instagram.com/vajid.ek"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
-              Instagram
-            </a>
-
-
-            <a
-              href="https://www.facebook.com/abdul.v.ek/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
-              Facebook
-            </a>
-
-
-            <a
-              href="https://github.com/vajidek"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-            >
-              GitHub
-            </a>
-
-          </div>
-
-
-          <div class="languages">
-
-            <strong>
-              Languages:
-            </strong>
-
-            Malayalam · English · Hindi · Tamil
-
-          </div>
 
         </div>
 
@@ -1359,12 +2722,14 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- =======================================================
+
+  <!-- ======================================================
        FOOTER
-  ======================================================== -->
+  ======================================================= -->
 
   <footer>
 
