@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Abdul Vajid EK | Vajid EK — Project & Department Coordinator</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Abdul Vajid EK | Vajid EK — Project & Department Coordinator
+  </title>
 
   <meta
     name="description"
     content="Official website of Abdul Vajid EK (Vajid EK), Project & Department Coordinator working across Construction & Infrastructure, Engineering & Project Operations, ERP and Digital Systems."
   >
 
-  <meta name="author" content="Abdul Vajid EK">
-  <meta name="robots" content="index, follow">
+  <meta
+    name="author"
+    content="Abdul Vajid EK"
+  >
 
-  <link rel="canonical" href="https://vajidek.github.io/">
+  <link
+    rel="canonical"
+    href="https://vajidek.github.io/"
+  >
 
   <!-- Open Graph -->
   <meta
     property="og:title"
-    content="Abdul Vajid EK | Vajid EK — Project & Department Coordinator"
+    content="Abdul Vajid EK | Vajid EK"
   >
 
   <meta
@@ -27,11 +38,19 @@
     content="Project & Department Coordinator | Construction & Infrastructure | Engineering & Project Operations | ERP & Digital Systems"
   >
 
-  <meta property="og:type" content="profile">
-
   <meta
     property="og:url"
     content="https://vajidek.github.io/"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Abdul Vajid EK"
   >
 
   <!-- Person Structured Data -->
@@ -65,22 +84,35 @@
   </script>
 
   <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
     :root {
       --bg: #07111f;
-      --surface: #0d1b2d;
-      --surface-2: #12243a;
-      --text: #f5f7fa;
-      --muted: #a9b6c7;
-      --line: rgba(255, 255, 255, 0.09);
+      --bg-soft: #0b1728;
+      --card: #0d1b2d;
+      --border: rgba(255, 255, 255, 0.09);
+
+      --text: #f4f7fb;
+      --muted: #a8b5c7;
+
       --accent: #63b3ff;
-      --accent-2: #8b7cff;
-      --max: 1100px;
+      --accent-soft: rgba(99, 179, 255, 0.12);
+
+      --max-width: 1100px;
     }
 
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -90,27 +122,21 @@
     body {
       font-family:
         Inter,
-        system-ui,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
         sans-serif;
 
-      background:
-        radial-gradient(
-          circle at 80% 10%,
-          rgba(99, 179, 255, 0.12),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 10% 30%,
-          rgba(139, 124, 255, 0.10),
-          transparent 30%
-        ),
-        var(--bg);
-
+      background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+
+      line-height: 1.6;
+
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     a {
@@ -118,12 +144,29 @@
       text-decoration: none;
     }
 
-    .container {
-      width: min(92%, var(--max));
-      margin: auto;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    /* NAVIGATION */
+
+    /* =========================================================
+       CONTAINER
+    ========================================================= */
+
+    .container {
+      width: min(
+        calc(100% - 40px),
+        var(--max-width)
+      );
+
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       NAVBAR
+    ========================================================= */
 
     nav {
       position: sticky;
@@ -131,86 +174,99 @@
       z-index: 100;
 
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
 
-      background: rgba(7, 17, 31, 0.78);
+      background: rgba(7, 17, 31, 0.82);
 
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
-      height: 68px;
+      min-height: 74px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 30px;
     }
 
     .brand {
+      font-size: 1.15rem;
       font-weight: 800;
-      font-size: 1.1rem;
       letter-spacing: -0.02em;
-    }
-
-    .brand span {
-      color: var(--accent);
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      align-items: center;
+      gap: 28px;
+    }
 
+    .nav-links a {
       color: var(--muted);
 
       font-size: 0.92rem;
+      font-weight: 600;
+
+      transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
     }
 
     .nav-links a:hover {
       color: var(--text);
     }
 
-    /* HERO */
+
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
-      min-height: 82vh;
+      min-height: calc(100vh - 74px);
 
-      display: flex;
-      align-items: center;
-
-      padding: 90px 0;
-    }
-
-    .hero-layout {
       display: grid;
 
-      grid-template-columns: 1fr 280px;
-
-      gap: 60px;
+      grid-template-columns:
+        minmax(0, 1fr)
+        280px;
 
       align-items: center;
+
+      gap: 70px;
+
+      padding:
+        90px 0
+        110px;
+    }
+
+    .hero-content {
+      max-width: 760px;
     }
 
     .eyebrow {
       color: var(--accent);
 
-      font-size: 0.9rem;
+      font-size: 1.2rem;
+      font-weight: 800;
 
-      font-weight: 700;
+      letter-spacing: 0.08em;
 
-      letter-spacing: 0.12em;
-
-      text-transform: uppercase;
-
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-size: clamp(
+        3rem,
+        8vw,
+        6.5rem
+      );
 
       line-height: 0.95;
 
       letter-spacing: -0.065em;
 
-      max-width: 850px;
+      font-weight: 800;
     }
 
     h1 span {
@@ -220,28 +276,95 @@
     }
 
     .hero-text {
-      max-width: 760px;
+      max-width: 680px;
 
-      margin-top: 28px;
+      margin-top: 30px;
 
       color: var(--muted);
 
-      font-size: 1.12rem;
+      font-size: 1.08rem;
+
+      line-height: 1.8;
     }
 
-    /* PROFILE PHOTO */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 14px;
+
+      margin-top: 34px;
+    }
+
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+
+      padding:
+        0 20px;
+
+      border-radius: 10px;
+
+      border: 1px solid var(--border);
+
+      font-size: 0.92rem;
+      font-weight: 700;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #06111e;
+
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: #83c5ff;
+      border-color: #83c5ff;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-soft);
+      border-color: rgba(99, 179, 255, 0.3);
+    }
+
+
+    /* =========================================================
+       PROFILE PHOTO
+    ========================================================= */
 
     .photo-wrapper {
       display: flex;
 
-      justify-content: center;
-
       align-items: center;
+      justify-content: center;
     }
 
     .photo-placeholder {
       width: 260px;
-
       height: 260px;
 
       border-radius: 50%;
@@ -249,159 +372,299 @@
       display: flex;
 
       align-items: center;
-
       justify-content: center;
 
       text-align: center;
 
       padding: 30px;
 
-      border: 1px dashed var(--line);
-
-      background: rgba(13, 27, 45, 0.72);
-
       color: var(--muted);
 
       font-size: 0.9rem;
+
+      border:
+        1px dashed
+        rgba(99, 179, 255, 0.35);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(99, 179, 255, 0.09),
+          transparent 65%
+        );
     }
 
-    /* BUTTONS */
 
-    .buttons {
-      display: flex;
-
-      gap: 14px;
-
-      flex-wrap: wrap;
-
-      margin-top: 34px;
-    }
-
-    .button {
-      padding: 12px 20px;
-
-      border-radius: 10px;
-
-      border: 1px solid var(--line);
-
-      background: var(--surface);
-
-      font-weight: 700;
-
-      transition: 0.2s;
-    }
-
-    .button.primary {
-      background: var(--text);
-
-      color: var(--bg);
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-
-      border-color: var(--accent);
-    }
-
-    /* SECTIONS */
+    /* =========================================================
+       SECTIONS
+    ========================================================= */
 
     section {
-      padding: 90px 0;
+      padding: 100px 0;
 
-      border-top: 1px solid var(--line);
+      border-top:
+        1px solid
+        var(--border);
+    }
+
+    .section-heading {
+      margin-bottom: 45px;
     }
 
     .section-label {
       color: var(--accent);
 
-      font-weight: 700;
+      font-size: 0.78rem;
 
-      margin-bottom: 10px;
+      font-weight: 800;
+
+      letter-spacing: 0.15em;
 
       text-transform: uppercase;
 
-      letter-spacing: 0.1em;
-
-      font-size: 0.8rem;
+      margin-bottom: 12px;
     }
 
     h2 {
-      font-size: clamp(2rem, 5vw, 3.3rem);
+      font-size: clamp(
+        2rem,
+        5vw,
+        3.6rem
+      );
 
-      letter-spacing: -0.045em;
+      line-height: 1.05;
 
-      margin-bottom: 22px;
+      letter-spacing: -0.04em;
     }
 
-    .intro {
-      max-width: 800px;
+    .section-intro {
+      max-width: 760px;
 
+      margin-top: 18px;
+
+      color: var(--muted);
+
+      font-size: 1.02rem;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.25fr
+        0.75fr;
+
+      gap: 24px;
+    }
+
+    .about-text {
+      padding: 32px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 18px;
+
+      background: var(--card);
+    }
+
+    .about-text p {
       color: var(--muted);
 
       font-size: 1.05rem;
+
+      line-height: 1.9;
     }
 
-    /* CARDS */
-
-    .grid {
+    .about-cards {
       display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns:
+        repeat(2, 1fr);
 
-      gap: 18px;
-
-      margin-top: 40px;
+      gap: 16px;
     }
 
-    .card {
-      padding: 28px;
+    .about-card {
+      padding: 25px;
 
-      border: 1px solid var(--line);
+      min-height: 150px;
+
+      border:
+        1px solid
+        var(--border);
 
       border-radius: 16px;
 
-      background: rgba(13, 27, 45, 0.72);
+      background: var(--card);
     }
 
-    .card h3 {
+    .about-card h3 {
+      font-size: 1rem;
+
       margin-bottom: 10px;
-
-      font-size: 1.15rem;
     }
 
-    .card p {
+    .about-card p {
       color: var(--muted);
+
+      font-size: 0.88rem;
+
+      line-height: 1.6;
     }
 
-    /* SKILLS */
+
+    /* =========================================================
+       EXPERTISE
+    ========================================================= */
 
     .skills {
       display: flex;
 
       flex-wrap: wrap;
 
-      gap: 10px;
-
-      margin-top: 32px;
+      gap: 12px;
     }
 
     .skill {
-      padding: 9px 14px;
+      padding:
+        10px 15px;
+
+      border:
+        1px solid
+        var(--border);
 
       border-radius: 999px;
 
-      border: 1px solid var(--line);
-
-      background: var(--surface);
+      background:
+        rgba(255, 255, 255, 0.025);
 
       color: #dce6f2;
 
       font-size: 0.9rem;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
     }
 
-    /* CONTACT */
+    .skill:hover {
+      background: var(--accent-soft);
 
-    .socials {
+      border-color:
+        rgba(99, 179, 255, 0.25);
+    }
+
+
+    /* =========================================================
+       WORK
+    ========================================================= */
+
+    .work-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .work-card {
+      padding: 30px;
+
+      min-height: 210px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 18px;
+
+      background: var(--card);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .work-card:hover {
+      transform: translateY(-4px);
+
+      border-color:
+        rgba(99, 179, 255, 0.28);
+    }
+
+    .work-number {
+      color: var(--accent);
+
+      font-size: 0.78rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+
+      margin-bottom: 22px;
+    }
+
+    .work-card h3 {
+      font-size: 1.35rem;
+
+      margin-bottom: 12px;
+    }
+
+    .work-card p {
+      color: var(--muted);
+
+      line-height: 1.7;
+
+      font-size: 0.95rem;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-box {
+      padding: 40px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(99, 179, 255, 0.08),
+          rgba(255, 255, 255, 0.02)
+        );
+    }
+
+    .contact-box h2 {
+      max-width: 750px;
+    }
+
+    .contact-text {
+      max-width: 700px;
+
+      margin-top: 18px;
+
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+    .contact-links {
       display: flex;
 
       flex-wrap: wrap;
@@ -411,65 +674,197 @@
       margin-top: 30px;
     }
 
-    /* FOOTER */
-
-    footer {
-      padding: 35px 0;
+    .languages {
+      margin-top: 30px;
 
       color: var(--muted);
 
-      border-top: 1px solid var(--line);
-
-      font-size: 0.9rem;
+      font-size: 0.92rem;
     }
 
-    /* MOBILE */
+    .languages strong {
+      color: var(--text);
+    }
 
-    @media (max-width: 720px) {
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding:
+        30px 0
+        40px;
+
+      color: #718198;
+
+      font-size: 0.82rem;
+
+      text-align: center;
+
+      border-top:
+        1px solid
+        var(--border);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        padding-top: 70px;
+      }
+
+      .photo-wrapper {
+        justify-content: flex-start;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .container {
+        width:
+          min(
+            calc(100% - 28px),
+            var(--max-width)
+          );
+      }
+
+      .nav-inner {
+        min-height: 66px;
+      }
 
       .nav-links {
-        display: none;
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 0.8rem;
       }
 
       .hero {
-        min-height: 75vh;
+        min-height: auto;
 
-        padding: 65px 0;
+        padding:
+          65px 0
+          80px;
       }
 
-      .hero-layout {
-        grid-template-columns: 1fr;
+      .eyebrow {
+        font-size: 1.05rem;
 
-        gap: 35px;
+        letter-spacing: 0.06em;
+
+        margin-bottom: 17px;
+      }
+
+      h1 {
+        font-size:
+          clamp(
+            2.8rem,
+            14vw,
+            4.5rem
+          );
+      }
+
+      .hero-text {
+        font-size: 0.98rem;
       }
 
       .photo-placeholder {
-        width: 190px;
-
-        height: 190px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
+        width: 220px;
+        height: 220px;
       }
 
       section {
-        padding: 65px 0;
+        padding: 75px 0;
       }
+
+      .about-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 28px;
+      }
+
     }
+
+
+    @media (max-width: 480px) {
+
+      .nav-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding:
+          17px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+
+        justify-content: space-between;
+
+        gap: 8px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .contact-links {
+        flex-direction: column;
+      }
+
+      .contact-links .btn {
+        width: 100%;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
 
   <nav>
-
     <div class="container nav-inner">
 
-      <a class="brand" href="#top">
-        Vajid<span> EK</span>
+      <a
+        href="#top"
+        class="brand"
+      >
+        Vajid EK
       </a>
 
       <div class="nav-links">
@@ -493,154 +888,179 @@
       </div>
 
     </div>
-
   </nav>
 
 
-  <!-- MAIN -->
-
   <main id="top">
 
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-    <!-- HERO -->
+    <header class="container hero">
 
-    <section class="hero">
+      <div class="hero-content">
 
-      <div class="container hero-layout">
-
-        <div>
-
-          <div class="eyebrow">
-            Abdul Vajid EK
-          </div>
-
-          <h1>
-            Project & Department
-            <span>Coordinator.</span>
-          </h1>
-
-          <p class="hero-text">
-            Construction & Infrastructure · Engineering & Project Operations ·
-            ERP & Digital Systems
-          </p>
-
-          <div class="buttons">
-
-            <a
-              class="button primary"
-              href="#about"
-            >
-              Explore Profile
-            </a>
-
-            <a
-              class="button"
-              href="#contact"
-            >
-              Connect
-            </a>
-
-          </div>
-
+        <div class="eyebrow">
+          Abdul Vajid EK
         </div>
 
+        <h1>
+          Project &amp; Department
+          <span>Coordinator.</span>
+        </h1>
 
-        <div class="photo-wrapper">
+        <p class="hero-text">
+          Construction &amp; Infrastructure · Engineering &amp;
+          Project Operations · ERP &amp; Digital Systems
+        </p>
 
-          <div class="photo-placeholder">
-            Professional profile photo
-          </div>
+        <div class="hero-actions">
+
+          <a
+            href="#about"
+            class="btn btn-primary"
+          >
+            Explore Profile
+          </a>
+
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+          >
+            Connect
+          </a>
 
         </div>
 
       </div>
 
-    </section>
+
+      <!-- Profile photo will be added here -->
+
+      <div class="photo-wrapper">
+
+        <div class="photo-placeholder">
+          Professional profile photo
+        </div>
+
+      </div>
+
+    </header>
 
 
-    <!-- ABOUT -->
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
 
     <section id="about">
 
       <div class="container">
 
-        <div class="section-label">
-          About
+        <div class="section-heading">
+
+          <div class="section-label">
+            About
+          </div>
+
+          <h2>
+            Coordination,
+            operations &amp; systems.
+          </h2>
+
+          <p class="section-intro">
+            Abdul Vajid EK, professionally known as Vajid EK,
+            works in project and department coordination across
+            construction and infrastructure operations, supporting
+            management, project activities, official coordination,
+            documentation and technology-enabled workflows.
+          </p>
+
         </div>
 
-        <h2>
-          Abdul Vajid EK
-        </h2>
 
-        <p class="intro">
+        <div class="about-grid">
 
-          Abdul Vajid EK, professionally known as
-          <strong>Vajid EK</strong>, works in project and department
-          coordination across construction and infrastructure operations,
-          supporting management, project activities, official coordination,
-          documentation and technology-enabled workflows.
-
-        </p>
-
-
-        <div class="grid">
-
-
-          <div class="card">
-
-            <h3>
-              Project Coordination
-            </h3>
+          <div class="about-text">
 
             <p>
-              Supporting project planning, execution, coordination,
-              documentation and day-to-day operational activities.
+              The work involves coordinating people, information,
+              documentation and operational activities across
+              projects and departments, while supporting management
+              requirements and improving digital workflows.
+            </p>
+
+            <br>
+
+            <p>
+              Areas of involvement include construction and
+              infrastructure operations, project coordination,
+              BOQ and tender support, procurement-related
+              activities, ERP systems, digital platforms,
+              automation and project documentation.
             </p>
 
           </div>
 
 
-          <div class="card">
+          <div class="about-cards">
 
-            <h3>
-              Management Support
-            </h3>
+            <div class="about-card">
 
-            <p>
-              Assisting management with project-related coordination
-              and organizational operations.
-            </p>
+              <h3>
+                Project Coordination
+              </h3>
+
+              <p>
+                Supporting project activities, coordination,
+                documentation and operational follow-up.
+              </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+              <h3>
+                Management Support
+              </h3>
+
+              <p>
+                Supporting management with project,
+                department and operational coordination.
+              </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+              <h3>
+                Official Coordination
+              </h3>
+
+              <p>
+                Coordinating communication and requirements
+                involving officials and external stakeholders.
+              </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+              <h3>
+                ERP &amp; Digital Systems
+              </h3>
+
+              <p>
+                Developing and improving digital workflows,
+                ERP platforms and technology-enabled operations.
+              </p>
+
+            </div>
 
           </div>
-
-
-          <div class="card">
-
-            <h3>
-              Official Coordination
-            </h3>
-
-            <p>
-              Coordinating with government and other visiting officials
-              and supporting communication and arrangements.
-            </p>
-
-          </div>
-
-
-          <div class="card">
-
-            <h3>
-              ERP & Digital Systems
-            </h3>
-
-            <p>
-              Designing and developing practical digital workflows
-              and enterprise systems for organizational and project operations.
-            </p>
-
-          </div>
-
 
         </div>
 
@@ -649,27 +1069,31 @@
     </section>
 
 
-    <!-- EXPERTISE -->
+    <!-- =====================================================
+         EXPERTISE
+    ====================================================== -->
 
     <section id="expertise">
 
       <div class="container">
 
-        <div class="section-label">
-          Expertise
+        <div class="section-heading">
+
+          <div class="section-label">
+            Expertise
+          </div>
+
+          <h2>
+            Areas of work.
+          </h2>
+
+          <p class="section-intro">
+            A combination of project coordination,
+            infrastructure operations, documentation,
+            procurement support and digital systems.
+          </p>
+
         </div>
-
-        <h2>
-          Professional & Technical Areas
-        </h2>
-
-        <p class="intro">
-
-          A combination of project coordination, construction and
-          infrastructure operations, engineering-related work and
-          digital systems.
-
-        </p>
 
 
         <div class="skills">
@@ -683,7 +1107,7 @@
           </span>
 
           <span class="skill">
-            Construction & Infrastructure
+            Construction &amp; Infrastructure
           </span>
 
           <span class="skill">
@@ -699,7 +1123,7 @@
           </span>
 
           <span class="skill">
-            Tender & Procurement Support
+            Tender &amp; Procurement Support
           </span>
 
           <span class="skill">
@@ -719,7 +1143,7 @@
           </span>
 
           <span class="skill">
-            SCADA & Industrial Automation
+            SCADA &amp; Industrial Automation
           </span>
 
         </div>
@@ -729,87 +1153,109 @@
     </section>
 
 
-    <!-- WORK -->
+    <!-- =====================================================
+         WORK
+    ====================================================== -->
 
     <section id="work">
 
       <div class="container">
 
-        <div class="section-label">
-          Work
+        <div class="section-heading">
+
+          <div class="section-label">
+            Work
+          </div>
+
+          <h2>
+            Professional focus.
+          </h2>
+
+          <p class="section-intro">
+            Work areas spanning physical infrastructure,
+            project operations and technology-driven systems.
+          </p>
+
         </div>
 
-        <h2>
-          Projects & Digital Work
-        </h2>
 
-        <p class="intro">
-
-          Work spanning construction and infrastructure project
-          coordination, operational support and technology-enabled
-          management systems.
-
-        </p>
+        <div class="work-grid">
 
 
-        <div class="grid">
+          <article class="work-card">
 
-
-          <div class="card">
+            <div class="work-number">
+              01
+            </div>
 
             <h3>
-              Construction & Infrastructure
+              Construction &amp; Infrastructure
             </h3>
 
             <p>
-              Project and site coordination, execution support,
-              documentation and operational activities.
+              Coordination and operational support across
+              construction and infrastructure-related
+              project activities.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="card">
+          <article class="work-card">
+
+            <div class="work-number">
+              02
+            </div>
 
             <h3>
               Project Operations
             </h3>
 
             <p>
-              Coordination across management, site, office and
-              external stakeholders to support project execution.
+              Project coordination, documentation,
+              communication, follow-up and support for
+              day-to-day operational requirements.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="card">
+          <article class="work-card">
+
+            <div class="work-number">
+              03
+            </div>
 
             <h3>
-              ERP & Digital Platforms
+              ERP &amp; Digital Platforms
             </h3>
 
             <p>
-              Development of integrated enterprise workflows for
-              projects, materials, procurement, HR, attendance,
-              payroll and reporting.
+              Designing and developing digital systems
+              to organize business processes, project
+              information and operational workflows.
             </p>
 
-          </div>
+          </article>
 
 
-          <div class="card">
+          <article class="work-card">
+
+            <div class="work-number">
+              04
+            </div>
 
             <h3>
-              Digital Engineering & Automation
+              Digital Engineering &amp; Automation
             </h3>
 
             <p>
-              Applying software, automation and AI technologies
-              to improve project and organizational workflows.
+              Exploring ERP, AI automation, SCADA,
+              industrial communication and technology
+              solutions for operational environments.
             </p>
 
-          </div>
+          </article>
 
 
         </div>
@@ -819,99 +1265,95 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
 
     <section id="contact">
 
       <div class="container">
 
-        <div class="section-label">
-          Connect
+        <div class="contact-box">
+
+          <div class="section-label">
+            Contact
+          </div>
+
+          <h2>
+            Connect with
+            Abdul Vajid EK.
+          </h2>
+
+          <p class="contact-text">
+            For professional communication, project-related
+            discussions, technology and digital systems,
+            or collaboration.
+          </p>
+
+
+          <div class="contact-links">
+
+            <a
+              href="mailto:vajidek1@gmail.com"
+              class="btn btn-primary"
+            >
+              Email
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/in/abdul-vajid-ek-a75b07234/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              LinkedIn
+            </a>
+
+
+            <a
+              href="https://www.instagram.com/vajid.ek"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              Instagram
+            </a>
+
+
+            <a
+              href="https://www.facebook.com/abdul.v.ek/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              Facebook
+            </a>
+
+
+            <a
+              href="https://github.com/vajidek"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+            >
+              GitHub
+            </a>
+
+          </div>
+
+
+          <div class="languages">
+
+            <strong>
+              Languages:
+            </strong>
+
+            Malayalam · English · Hindi · Tamil
+
+          </div>
+
         </div>
-
-        <h2>
-          Vajid EK
-        </h2>
-
-        <p class="intro">
-
-          Professional profile and digital presence of
-          Abdul Vajid EK.
-
-        </p>
-
-
-        <div class="socials">
-
-
-          <!-- EMAIL -->
-
-          <a
-            class="button primary"
-            href="mailto:vajidek1@gmail.com"
-          >
-            Email
-          </a>
-
-
-          <!-- LINKEDIN -->
-
-          <a
-            class="button"
-            href="https://www.linkedin.com/in/abdul-vajid-ek-a75b07234/"
-            target="_blank"
-            rel="noopener"
-          >
-            LinkedIn
-          </a>
-
-
-          <!-- INSTAGRAM -->
-
-          <a
-            class="button"
-            href="https://www.instagram.com/vajid.ek"
-            target="_blank"
-            rel="noopener"
-          >
-            Instagram
-          </a>
-
-
-          <!-- FACEBOOK -->
-
-          <a
-            class="button"
-            href="https://www.facebook.com/abdul.v.ek/"
-            target="_blank"
-            rel="noopener"
-          >
-            Facebook
-          </a>
-
-
-          <!-- GITHUB -->
-
-          <a
-            class="button"
-            href="https://github.com/vajidek"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub
-          </a>
-
-
-        </div>
-
-
-        <p
-          class="intro"
-          style="margin-top:24px;font-size:.92rem"
-        >
-          Languages:
-          Malayalam · English · Hindi · Tamil
-        </p>
 
       </div>
 
@@ -920,7 +1362,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
 
   <footer>
 
